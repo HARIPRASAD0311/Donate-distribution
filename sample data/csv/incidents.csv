@@ -1,0 +1,4 @@
+id,code,name,region,crisisType,severity,type,declaredAt,isSimulated,isSupported,center_json,zoom,activeDispatchesCount,criticalPocketsCount
+INC-2026-0412,CYC-IDAI-2,Brahmaputra Monsoon Floods 2024 — Coastal & Valley Response,Assam Brahmaputra Flood Response,Flood,LEVEL_3_EMERGENCY,Tropical Cyclone (Cat 4),2024-07-04T02:00:00Z,true,true,"[26.09,91.5452]",11,4,2
+INC-2026-0518,ARM-SOUTH-04,Armed Conflict Displaced Population Convoy,Middle East / South Corridor,Armed Conflict,LEVEL_4_CATASTROPHIC,Complex Humanitarian Emergency,2024-07-01T08:00:00Z,true,true,"[31.35,34.31]",11,7,5
+INC-2026-0622,PAN-CHOL-09,Cholera & Waterborne Epidemic Triage,Horn of Africa / Lake Basin,Pandemic,LEVEL_3_EMERGENCY,Epidemic Outbreak,2024-06-28T14:30:00Z,true,true,"[40.22,91.43]",11,3,3

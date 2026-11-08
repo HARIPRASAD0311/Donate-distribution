@@ -1,0 +1,2651 @@
+{
+  "commandCenter": {
+    "isSupported": true,
+    "regionName": "Assam Brahmaputra Flood Response",
+    "scopeLabel": "ASSAM BRAHMAPUTRA FLOOD RESPONSE (FLOOD)",
+    "kpis": [
+      {
+        "id": "kpi-affected-pop",
+        "title": "Affected Population",
+        "value": "640,000",
+        "unit": "people",
+        "status": "critical",
+        "trend": {
+          "value": "+18.7%",
+          "isPositive": false,
+          "direction": "up",
+          "label": "vs 2 Jul ASDMA snapshot"
+        },
+        "tooltip": "Synthetic planning estimate anchored to the ASDMA-reported July 2024 Assam flood impact."
+      },
+      {
+        "id": "kpi-usable-resources",
+        "title": "Available Usable Resources",
+        "value": "14,250",
+        "unit": "m³ buffer",
+        "status": "teal",
+        "trend": {
+          "value": "78%",
+          "isPositive": true,
+          "direction": "neutral",
+          "label": "aggregate capacity"
+        },
+        "tooltip": "Total volume of verified, undamaged humanitarian relief commodities in flood bases."
+      },
+      {
+        "id": "kpi-unmet-demand",
+        "title": "Critical Unmet Demand",
+        "value": "3,850",
+        "unit": "urgent units",
+        "status": "critical",
+        "trend": {
+          "value": "2 pockets",
+          "isPositive": false,
+          "direction": "up",
+          "label": "cut-off deficit"
+        },
+        "tooltip": "Confirmed community requests exceeding current dispatched allocations."
+      },
+      {
+        "id": "kpi-affected-locations",
+        "title": "Affected Locations",
+        "value": "19",
+        "unit": "districts",
+        "status": "warning",
+        "trend": {
+          "value": "4 priority zones",
+          "isPositive": true,
+          "direction": "neutral",
+          "label": "monitored"
+        },
+        "tooltip": "Settlements reporting infrastructure deficit or rising flood waters."
+      },
+      {
+        "id": "kpi-inaccessible-locations",
+        "title": "Inaccessible Locations",
+        "value": "5",
+        "unit": "cut-off pockets",
+        "status": "critical",
+        "trend": {
+          "value": "Barge / Air only",
+          "isPositive": false,
+          "direction": "up",
+          "label": "road impassable"
+        },
+        "tooltip": "Communities cut off by destroyed culverts or high flood currents."
+      },
+      {
+        "id": "kpi-active-disruptions",
+        "title": "Active Disruptions",
+        "value": "2",
+        "unit": "major corridors",
+        "status": "critical",
+        "trend": {
+          "value": "+4.5h delay",
+          "isPositive": false,
+          "direction": "up",
+          "label": "detour active"
+        },
+        "tooltip": "Severe physical infrastructure washouts preventing heavy truck transit."
+      }
+    ],
+    "mapEntities": {
+      "center": [
+        26.09,
+        91.5452
+      ],
+      "zoom": 11,
+      "scopeLabel": "ASSAM BRAHMAPUTRA FLOOD RESPONSE (FLOOD)",
+      "isSupported": true,
+      "facilities": [
+        {
+          "id": "FAC-MZ-01",
+          "code": "CSD-01",
+          "name": "Central Staging Depot Alpha",
+          "type": "WAREHOUSE",
+          "locationName": "Port Access Sector Alpha",
+          "coordinates": [
+            26.08496,
+            91.54232
+          ],
+          "totalCapacityM3": 5000,
+          "utilizedCapacityM3": 3850,
+          "utilizationPct": 77,
+          "status": "OPERATIONAL",
+          "stockSummary": "4,500 food pkts, 3,500 water bladders",
+          "contact": "Capt. M. Al-Farooq (Depot Master)",
+          "isSimulated": true
+        },
+        {
+          "id": "FAC-MZ-02",
+          "code": "NLB-02",
+          "name": "North Logistics Base",
+          "type": "WAREHOUSE",
+          "locationName": "Highland Dry Sector",
+          "coordinates": [
+            26.1476,
+            91.58264
+          ],
+          "totalCapacityM3": 3500,
+          "utilizedCapacityM3": 3100,
+          "utilizationPct": 88,
+          "status": "CONSTRAINED",
+          "stockSummary": "180 cholera kits, 800 hygiene kits",
+          "contact": "Lt. S. Sithole (Logistics Lead)",
+          "isSimulated": true
+        },
+        {
+          "id": "FAC-MZ-03",
+          "code": "SRD-03",
+          "name": "Southern Reserve Depot",
+          "type": "WAREHOUSE",
+          "locationName": "Bayside Transit Zone",
+          "coordinates": [
+            26.0396,
+            91.50992
+          ],
+          "totalCapacityM3": 4000,
+          "utilizedCapacityM3": 1200,
+          "utilizationPct": 30,
+          "status": "OPERATIONAL",
+          "stockSummary": "240 trauma kits, 1,200 shelter tarps",
+          "contact": "Officer K. Banda",
+          "isSimulated": true
+        },
+        {
+          "id": "DC-MZ-01",
+          "code": "HUB-02",
+          "name": "Sector 2 Distribution Hub",
+          "type": "DISTRIBUTION_CENTRE",
+          "locationName": "Central Urban Transit Ring",
+          "coordinates": [
+            26.0972,
+            91.55816
+          ],
+          "status": "OPERATIONAL",
+          "stockSummary": "Active staging for 350 food packets",
+          "contact": "Field Relief Coordinator",
+          "isSimulated": true
+        },
+        {
+          "id": "DC-MZ-02",
+          "code": "EDC-05",
+          "name": "East Distribution Centre",
+          "type": "DISTRIBUTION_CENTRE",
+          "locationName": "Coastal Sector East",
+          "coordinates": [
+            26.0684,
+            91.5992
+          ],
+          "status": "CONSTRAINED",
+          "stockSummary": "Awaiting culvert detour replenishment",
+          "contact": "Community Triage Center",
+          "isSimulated": true
+        }
+      ],
+      "communities": [
+        {
+          "id": "COMM-MZ-01",
+          "name": "Delta Settlement",
+          "sector": "North Zone (Estuary Flats)",
+          "coordinates": [
+            26.11592,
+            91.51712
+          ],
+          "population": 14200,
+          "priority": "CRITICAL",
+          "accessibility": "INACCESSIBLE_BY_ROAD",
+          "accessMethod": "Shallow-Draft River Barge (BRG-02)",
+          "primaryNeed": "High-Energy Food Biscuits (BP-5)",
+          "requiredQty": 1800,
+          "unit": "pkts",
+          "unmetQty": 1450,
+          "verificationStatus": "VERIFIED",
+          "reportedBy": "A. Diallo (Local Committee)",
+          "isSimulated": true
+        },
+        {
+          "id": "COMM-MZ-02",
+          "name": "East Coastal Village",
+          "sector": "East Zone (Causeway Cut-off)",
+          "coordinates": [
+            26.0612,
+            91.57616
+          ],
+          "population": 8500,
+          "priority": "CRITICAL",
+          "accessibility": "INACCESSIBLE_BY_ROAD",
+          "accessMethod": "Light 4x4 Convoy or Air Drop",
+          "primaryNeed": "Drinking Water Bladders (10L)",
+          "requiredQty": 3500,
+          "unit": "cntr",
+          "unmetQty": 2400,
+          "verificationStatus": "PENDING_RECON",
+          "reportedBy": "Dr. E. Moyo (Field Clinic)",
+          "isSimulated": true
+        },
+        {
+          "id": "COMM-MZ-03",
+          "name": "Riverdale Settlement Clinic",
+          "sector": "Riverdale Basin Zone",
+          "coordinates": [
+            26.1008,
+            91.4876
+          ],
+          "population": 6400,
+          "priority": "HIGH",
+          "accessibility": "CONSTRAINED_MUD",
+          "accessMethod": "Off-Road Scout & Winch",
+          "primaryNeed": "Cholera Rapid Response Kits",
+          "requiredQty": 50,
+          "unit": "kits",
+          "unmetQty": 10,
+          "verificationStatus": "VERIFIED",
+          "reportedBy": "Nurse Muthemba",
+          "isSimulated": true
+        },
+        {
+          "id": "COMM-MZ-04",
+          "name": "Morigaon Inland Camp",
+          "sector": "Highland North Buffer",
+          "coordinates": [
+            26.1368,
+            91.5452
+          ],
+          "population": 19000,
+          "priority": "MEDIUM",
+          "accessibility": "PASSABLE",
+          "accessMethod": "Standard 10-Ton Heavy Trucks",
+          "primaryNeed": "Hygiene & Dignity Kits",
+          "requiredQty": 800,
+          "unit": "kits",
+          "unmetQty": 0,
+          "verificationStatus": "VERIFIED",
+          "reportedBy": "Humanitarian Staging Team",
+          "isSimulated": true
+        },
+        {
+          "id": "COMM-MZ-05",
+          "name": "Barpeta River Crossing Pocket",
+          "sector": "Southern Estuary Shore",
+          "coordinates": [
+            26.0504,
+            91.466
+          ],
+          "population": 11200,
+          "priority": "HIGH",
+          "accessibility": "PASSABLE_RESTRICTED",
+          "accessMethod": "Light 4x4 Only (Rising Waters)",
+          "primaryNeed": "Trauma First Aid Kits",
+          "requiredQty": 120,
+          "unit": "kits",
+          "unmetQty": 40,
+          "verificationStatus": "VERIFIED",
+          "reportedBy": "Local Volunteers",
+          "isSimulated": true
+        }
+      ],
+      "disruptions": [
+        {
+          "id": "DISR-MZ-01",
+          "code": "DISR-1042",
+          "title": "Culvert Structural Washout at km 42",
+          "coordinates": [
+            26.0792,
+            91.5704
+          ],
+          "severity": "CRITICAL",
+          "corridor": "Coastal Highway Route rt-1",
+          "impact": "Complete roadway collapse. 10-Ton cargo vehicles cannot traverse.",
+          "delay": "+4.5 Hours Detour",
+          "suggestedBypass": "Inland Highland Route rt-3 Bypass",
+          "status": "UNRESOLVED",
+          "isSimulated": true
+        },
+        {
+          "id": "DISR-MZ-02",
+          "code": "DISR-1043",
+          "title": "Roadway Mud Impasse at km 6",
+          "coordinates": [
+            26.09936,
+            91.4984
+          ],
+          "severity": "WARNING",
+          "corridor": "Riverdale Basin Road",
+          "impact": "20cm surface mud accumulation. Winching required.",
+          "delay": "+1.5 Hours Delay",
+          "suggestedBypass": "Western Ridge Off-Road Track",
+          "status": "SCOUT_DEPLOYED",
+          "isSimulated": true
+        }
+      ],
+      "routes": [
+        {
+          "id": "rt-mz-1-broken",
+          "name": "Route rt-1 (Coastal Corridor)",
+          "status": "IMPASSABLE",
+          "color": "#C94C4C",
+          "dashArray": "4 4",
+          "points": [
+            [
+              26.08496,
+              91.54232
+            ],
+            [
+              26.0792,
+              91.5704
+            ],
+            [
+              26.0684,
+              91.5992
+            ]
+          ]
+        },
+        {
+          "id": "rt-mz-2-waterway",
+          "name": "Route rt-2 (River Pungue Barge Channel)",
+          "status": "PASSABLE",
+          "color": "#176B76",
+          "dashArray": "none",
+          "points": [
+            [
+              26.08496,
+              91.54232
+            ],
+            [
+              26.1044,
+              91.5308
+            ],
+            [
+              26.11592,
+              91.51712
+            ]
+          ]
+        },
+        {
+          "id": "rt-mz-3-highland",
+          "name": "Route rt-3 (Highland Bypass rt-1)",
+          "status": "PASSABLE",
+          "color": "#27856F",
+          "dashArray": "none",
+          "points": [
+            [
+              26.1476,
+              91.58264
+            ],
+            [
+              26.1224,
+              91.5884
+            ],
+            [
+              26.0684,
+              91.5992
+            ]
+          ]
+        },
+        {
+          "id": "rt-mz-4-southern",
+          "name": "Route rt-4 (Southern River Track)",
+          "status": "CONSTRAINED",
+          "color": "#D99A35",
+          "dashArray": "6 4",
+          "points": [
+            [
+              26.0396,
+              91.50992
+            ],
+            [
+              26.0504,
+              91.4876
+            ],
+            [
+              26.0504,
+              91.466
+            ]
+          ]
+        },
+        {
+          "id": "rt-mz-5-unknown",
+          "name": "Route rt-5 (East Causeway Trail)",
+          "status": "UNKNOWN",
+          "color": "#94A3B8",
+          "dashArray": "3 3",
+          "points": [
+            [
+              26.0684,
+              91.5992
+            ],
+            [
+              26.0648,
+              91.58696
+            ],
+            [
+              26.0612,
+              91.57616
+            ]
+          ]
+        }
+      ]
+    },
+    "charts": {
+      "commodityAvailability": [
+        {
+          "commodity": "Food (BP-5)",
+          "onHand": 4500,
+          "dispatched": 1200,
+          "unmet": 1450
+        },
+        {
+          "commodity": "Water (10L)",
+          "onHand": 3500,
+          "dispatched": 950,
+          "unmet": 2400
+        },
+        {
+          "commodity": "Medical Kits",
+          "onHand": 420,
+          "dispatched": 280,
+          "unmet": 10
+        },
+        {
+          "commodity": "Shelter Tarps",
+          "onHand": 1200,
+          "dispatched": 600,
+          "unmet": 250
+        },
+        {
+          "commodity": "Hygiene Kits",
+          "onHand": 800,
+          "dispatched": 500,
+          "unmet": 0
+        }
+      ],
+      "regionalCoverage": [
+        {
+          "zone": "Morigaon Highland",
+          "coverage": 100,
+          "unmetCount": 0
+        },
+        {
+          "zone": "Riverdale Basin",
+          "coverage": 82,
+          "unmetCount": 10
+        },
+        {
+          "zone": "Barpeta Riverfront",
+          "coverage": 67,
+          "unmetCount": 40
+        },
+        {
+          "zone": "Delta Settlement",
+          "coverage": 20,
+          "unmetCount": 1450
+        },
+        {
+          "zone": "East Coastal",
+          "coverage": 31,
+          "unmetCount": 2400
+        }
+      ],
+      "criticalDemandDonut": [
+        {
+          "name": "Clean Drinking Water",
+          "value": 2400,
+          "color": "#176B76"
+        },
+        {
+          "name": "Emergency Food (BP-5)",
+          "value": 1450,
+          "color": "#1D3B56"
+        },
+        {
+          "name": "Shelter Materials",
+          "value": 250,
+          "color": "#60758A"
+        },
+        {
+          "name": "Trauma & Medical",
+          "value": 50,
+          "color": "#C94C4C"
+        }
+      ],
+      "activityTimeline": [
+        {
+          "day": "Day -6",
+          "distressCalls": 18,
+          "dispatches": 6
+        },
+        {
+          "day": "Day -5",
+          "distressCalls": 34,
+          "dispatches": 12
+        },
+        {
+          "day": "Day -4",
+          "distressCalls": 52,
+          "dispatches": 19
+        },
+        {
+          "day": "Day -3",
+          "distressCalls": 48,
+          "dispatches": 24
+        },
+        {
+          "day": "Day -2",
+          "distressCalls": 62,
+          "dispatches": 28
+        },
+        {
+          "day": "Yesterday",
+          "distressCalls": 45,
+          "dispatches": 32
+        },
+        {
+          "day": "Today (Live)",
+          "distressCalls": 28,
+          "dispatches": 18
+        }
+      ],
+      "facilityReadiness": [
+        {
+          "code": "FAC-01",
+          "name": "Central Staging Depot Alpha",
+          "capacityPct": 77,
+          "status": "OPERATIONAL",
+          "availableM3": 1150
+        },
+        {
+          "code": "FAC-02",
+          "name": "North Logistics Base",
+          "capacityPct": 88,
+          "status": "CONSTRAINED",
+          "availableM3": 400
+        },
+        {
+          "code": "FAC-03",
+          "name": "Southern Reserve Depot",
+          "capacityPct": 30,
+          "status": "OPERATIONAL",
+          "availableM3": 2800
+        }
+      ]
+    },
+    "operationalPanels": {
+      "criticalIncidents": [
+        {
+          "id": "INC-101",
+          "title": "Delta Estuary Inundation",
+          "time": "12m ago",
+          "summary": "River surge cut off 14,200 people. Shallow barge required."
+        },
+        {
+          "id": "INC-102",
+          "title": "Culvert km 42 Washout",
+          "time": "45m ago",
+          "summary": "Route rt-1 severed. Pontoon bridge requested from engineers."
+        },
+        {
+          "id": "INC-103",
+          "title": "East Coastal Isolation",
+          "time": "1h 10m ago",
+          "summary": "Causeway submerged under 0.8m tidal water. Recon drone tasked."
+        }
+      ],
+      "activeDisruptions": [
+        {
+          "id": "DIS-01",
+          "name": "Culvert Washout km 42",
+          "delay": "+4.5h delay",
+          "corridor": "Coastal Route rt-1",
+          "status": "REROUTED_VIA_RT3"
+        },
+        {
+          "id": "DIS-02",
+          "name": "Riverdale Mud Inundation",
+          "delay": "+1.5h delay",
+          "corridor": "Riverdale Road",
+          "status": "WINCH_RECOVERY_ACTIVE"
+        }
+      ],
+      "facilityStatus": [
+        {
+          "code": "CSD-01",
+          "name": "Central Staging Depot",
+          "util": 77
+        },
+        {
+          "code": "NLB-02",
+          "name": "North Logistics Base",
+          "util": 88
+        },
+        {
+          "code": "SRD-03",
+          "name": "Southern Reserve Depot",
+          "util": 30
+        }
+      ],
+      "pendingDecisions": [
+        {
+          "id": "DEC-01",
+          "title": "Authorize Barge BRG-02",
+          "consequence": "Dispatches 1,450 BP-5 food cartons to Delta Settlement via River Pungue."
+        },
+        {
+          "id": "DEC-02",
+          "title": "Highland Detour Sign-off",
+          "consequence": "Reroutes 10-Ton convoy via Route rt-3 adding 38km."
+        }
+      ],
+      "recentEvents": [
+        {
+          "id": "EVT-01",
+          "time": "10:14 UTC",
+          "text": "Shallow-draft barge BRG-02 completed mooring at Guwahati Staging Hub."
+        },
+        {
+          "id": "EVT-02",
+          "time": "09:48 UTC",
+          "text": "Water quality lab released lot WT-2026-992 (potable pass)."
+        },
+        {
+          "id": "EVT-03",
+          "time": "09:12 UTC",
+          "text": "Convoy CNV-102 reached Morigaon Camp with 500 hygiene kits."
+        }
+      ]
+    },
+    "priorityDemands": [
+      {
+        "id": "DEM-001",
+        "region": "Delta Settlement (North Estuary)",
+        "commodity": "High-Energy Food Biscuits (BP-5)",
+        "requiredQty": 1800,
+        "availableQty": 350,
+        "unmetQty": 1450,
+        "unit": "pkts",
+        "priority": "CRITICAL",
+        "verificationStatus": "VERIFIED",
+        "actionNeeded": "Authorize river barge BRG-02 transport"
+      },
+      {
+        "id": "DEM-002",
+        "region": "East Coastal Village (Causeway Cut-off)",
+        "commodity": "Clean Drinking Water Bladders (10L)",
+        "requiredQty": 3500,
+        "availableQty": 1100,
+        "unmetQty": 2400,
+        "unit": "cntr",
+        "priority": "CRITICAL",
+        "verificationStatus": "PENDING_RECON",
+        "actionNeeded": "Recon scout drone flight required"
+      },
+      {
+        "id": "DEM-005",
+        "region": "Barpeta River Crossing Pocket",
+        "commodity": "Trauma First Aid Response Kits",
+        "requiredQty": 120,
+        "availableQty": 80,
+        "unmetQty": 40,
+        "unit": "kits",
+        "priority": "HIGH",
+        "verificationStatus": "VERIFIED",
+        "actionNeeded": "Dispatch 4x4 utility pickup via southern trail"
+      },
+      {
+        "id": "DEM-003",
+        "region": "Riverdale Settlement Clinic",
+        "commodity": "Cholera Rapid Response Kits",
+        "requiredQty": 50,
+        "availableQty": 40,
+        "unmetQty": 10,
+        "unit": "kits",
+        "priority": "HIGH",
+        "verificationStatus": "VERIFIED",
+        "actionNeeded": "Winch assistance at km 6 mud impasse"
+      }
+    ]
+  },
+  "network": {
+    "isSupported": true,
+    "regionName": "Assam Brahmaputra Flood Response",
+    "scopeLabel": "ASSAM BRAHMAPUTRA FLOOD RESPONSE (FLOOD)",
+    "center": [
+      26.09,
+      91.5452
+    ],
+    "defaultZoom": 11,
+    "entities": [
+      {
+        "id": "DNR-MZ-01",
+        "code": "WFP-HQ",
+        "name": "UN WFP Global Logistics Staging Base",
+        "category": "INSTITUTIONAL_DONOR",
+        "coordinates": [
+          26.1224,
+          91.5668
+        ],
+        "operationalStatus": "OPERATIONAL",
+        "storageCapacityM3": 15000,
+        "availableResources": "Air-bridge staging; 50,000 MT grain pipeline",
+        "connectedFacilities": [
+          "SUP-MZ-01",
+          "CSD-MZ-01"
+        ],
+        "routeAccessibility": "UNRESTRICTED_AIR_PORT",
+        "securityAuthorization": "UN_SECURITY_CLEARED",
+        "lastVerification": "Today 06:00 UTC",
+        "dataSource": "UN Logistics Cluster SITREP",
+        "timestamp": "2024-07-05T06:00:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "DNR-MZ-02",
+        "code": "ECHO-STG",
+        "name": "DG ECHO Humanitarian Aid Forward Hub",
+        "category": "INSTITUTIONAL_DONOR",
+        "coordinates": [
+          26.1116,
+          91.5956
+        ],
+        "operationalStatus": "OPERATIONAL",
+        "storageCapacityM3": 8000,
+        "availableResources": "Water purification plants; Cholera trauma kits",
+        "connectedFacilities": [
+          "CSD-MZ-01",
+          "FRRA-MZ-02"
+        ],
+        "routeAccessibility": "UNRESTRICTED_AIR_PORT",
+        "securityAuthorization": "UN_SECURITY_CLEARED",
+        "lastVerification": "Today 06:30 UTC",
+        "dataSource": "ECHO Field Liaison Telemetry",
+        "timestamp": "2024-07-05T06:30:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "SUP-MZ-01",
+        "code": "MILL-01",
+        "name": "Guwahati Agro-Milling & Grain Silos",
+        "category": "SUPPLIER",
+        "coordinates": [
+          26.0936,
+          91.5272
+        ],
+        "operationalStatus": "OPERATIONAL",
+        "storageCapacityM3": 12000,
+        "availableResources": "High-Energy Biscuits (BP-5), Fortified Maize Flour",
+        "connectedFacilities": [
+          "DNR-MZ-01",
+          "CSD-MZ-01"
+        ],
+        "routeAccessibility": "PASSABLE_HEAVY_TRUCK",
+        "securityAuthorization": "UN_SECURITY_CLEARED",
+        "lastVerification": "Today 07:15 UTC",
+        "dataSource": "Commercial Supply Registry",
+        "timestamp": "2024-07-05T07:15:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "SUP-MZ-02",
+        "code": "MED-PROV",
+        "name": "Southern Coast Pharmaceuticals & Water Tech",
+        "category": "SUPPLIER",
+        "coordinates": [
+          26.0504,
+          91.52
+        ],
+        "operationalStatus": "OPERATIONAL",
+        "storageCapacityM3": 4500,
+        "availableResources": "Drinking water bladders (10L), ORS packets",
+        "connectedFacilities": [
+          "CSD-MZ-01",
+          "FRRA-MZ-02"
+        ],
+        "routeAccessibility": "PASSABLE_RESTRICTED",
+        "securityAuthorization": "LOCAL_CIVIL_DEFENSE_CLEARED",
+        "lastVerification": "Today 07:00 UTC",
+        "dataSource": "Pharmaceutical FEFO Registry",
+        "timestamp": "2024-07-05T07:00:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "CSD-MZ-01",
+        "code": "CSD-01",
+        "name": "Central Staging Depot Alpha (Tier-I)",
+        "category": "TIER_1_FOODBANK",
+        "coordinates": [
+          26.08496,
+          91.54232
+        ],
+        "operationalStatus": "OPERATIONAL",
+        "storageCapacityM3": 5000,
+        "availableResources": "4,500 food pkts (BP-5), 3,500 water bladders (10L)",
+        "connectedFacilities": [
+          "SUP-MZ-01",
+          "SUP-MZ-02",
+          "DC-MZ-01",
+          "DC-MZ-02"
+        ],
+        "routeAccessibility": "PASSABLE_MAIN_TERMINAL",
+        "securityAuthorization": "OCHA_DECONFLICTION_CERTIFIED",
+        "lastVerification": "Today 08:00 UTC",
+        "dataSource": "Central Inventory Ledger",
+        "timestamp": "2024-07-05T08:00:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "FRRA-MZ-01",
+        "code": "NLB-02",
+        "name": "North Logistics Base (Highland Staging)",
+        "category": "TIER_2_FRRA",
+        "coordinates": [
+          26.1476,
+          91.58264
+        ],
+        "operationalStatus": "CONSTRAINED",
+        "storageCapacityM3": 3500,
+        "availableResources": "180 cholera kits, 800 hygiene kits, 1,200 shelter tarps",
+        "connectedFacilities": [
+          "CSD-MZ-01",
+          "COMM-MZ-04"
+        ],
+        "routeAccessibility": "PASSABLE_HIGHLAND_ROAD",
+        "securityAuthorization": "UN_SECURITY_CLEARED",
+        "lastVerification": "Today 07:45 UTC",
+        "dataSource": "NLB Field Depot Telemetry",
+        "timestamp": "2024-07-05T07:45:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "FRRA-MZ-02",
+        "code": "SRD-03",
+        "name": "South Relief Staging Depot",
+        "category": "TIER_2_FRRA",
+        "coordinates": [
+          26.0396,
+          91.50992
+        ],
+        "operationalStatus": "OPERATIONAL",
+        "storageCapacityM3": 4000,
+        "availableResources": "240 trauma kits, 1,200 shelter tarps, 800 water jerrycans",
+        "connectedFacilities": [
+          "CSD-MZ-01",
+          "COMM-MZ-05"
+        ],
+        "routeAccessibility": "PASSABLE_RESTRICTED",
+        "securityAuthorization": "LOCAL_CIVIL_DEFENSE_CLEARED",
+        "lastVerification": "Today 06:15 UTC",
+        "dataSource": "Southern Base SITREP",
+        "timestamp": "2024-07-05T06:15:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "DC-MZ-01",
+        "code": "HUB-02",
+        "name": "Sector 2 Distribution Hub",
+        "category": "DISTRIBUTION_CENTRE",
+        "coordinates": [
+          26.0972,
+          91.55816
+        ],
+        "operationalStatus": "OPERATIONAL",
+        "storageCapacityM3": 1800,
+        "availableResources": "Active cross-docking; 350 food cartons staged",
+        "connectedFacilities": [
+          "CSD-MZ-01",
+          "BEN-MZ-01"
+        ],
+        "routeAccessibility": "PASSABLE_URBAN_ARTERIAL",
+        "securityAuthorization": "RED_CROSS_ESCORT",
+        "lastVerification": "Today 07:30 UTC",
+        "dataSource": "Hub Offload Registry",
+        "timestamp": "2024-07-05T07:30:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "DC-MZ-02",
+        "code": "EDC-05",
+        "name": "East Coastal Distribution Centre",
+        "category": "DISTRIBUTION_CENTRE",
+        "coordinates": [
+          26.0684,
+          91.5992
+        ],
+        "operationalStatus": "CONSTRAINED",
+        "storageCapacityM3": 1200,
+        "availableResources": "Buffer exhausted; awaiting culvert detour replenishment",
+        "connectedFacilities": [
+          "CSD-MZ-01",
+          "BEN-MZ-02"
+        ],
+        "routeAccessibility": "IMPASSABLE_CUT_OFF_BY_WASHOUT",
+        "securityAuthorization": "ASSESSMENT_PENDING",
+        "lastVerification": "Today 08:20 UTC",
+        "dataSource": "Coastal Triage Registry",
+        "timestamp": "2024-07-05T08:20:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "BEN-MZ-01",
+        "code": "COMM-DELTA",
+        "name": "Delta Estuary Evacuation Settlement",
+        "category": "BENEFICIARY_LOCATION",
+        "coordinates": [
+          26.11592,
+          91.51712
+        ],
+        "operationalStatus": "CRITICAL_DEFICIT",
+        "storageCapacityM3": 200,
+        "availableResources": "Emergency Need: 1,450 pkts BP-5; 14,200 IDPs in reach",
+        "connectedFacilities": [
+          "DC-MZ-01"
+        ],
+        "routeAccessibility": "WATERWAY_BARGE_ONLY",
+        "securityAuthorization": "COMMUNITY_SECURED",
+        "lastVerification": "Today 08:10 UTC",
+        "dataSource": "Field Camp Committee Census",
+        "timestamp": "2024-07-05T08:10:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "BEN-MZ-02",
+        "code": "COMM-EAST",
+        "name": "East Coastal Resettlement",
+        "category": "BENEFICIARY_LOCATION",
+        "coordinates": [
+          26.0612,
+          91.57616
+        ],
+        "operationalStatus": "CRITICAL_DEFICIT",
+        "storageCapacityM3": 150,
+        "availableResources": "Emergency Need: 2,400 water containers; 8,500 people",
+        "connectedFacilities": [
+          "DC-MZ-02"
+        ],
+        "routeAccessibility": "AIR_DROP_OR_WINCH_ONLY",
+        "securityAuthorization": "COMMUNITY_SECURED",
+        "lastVerification": "Today 08:15 UTC",
+        "dataSource": "Field Clinic Emergency SITREP",
+        "timestamp": "2024-07-05T08:15:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "COMM-MZ-03",
+        "code": "CLINIC-RIV",
+        "name": "Riverdale Settlement Clinic",
+        "category": "AFFECTED_COMMUNITY",
+        "coordinates": [
+          26.1008,
+          91.4876
+        ],
+        "operationalStatus": "STRAINED",
+        "storageCapacityM3": 100,
+        "availableResources": "Emergency Need: 50 cholera treatment kits; 6,400 people",
+        "connectedFacilities": [
+          "FRRA-MZ-01"
+        ],
+        "routeAccessibility": "PASSABLE_DIFFICULT_MUD",
+        "securityAuthorization": "COMMUNITY_SECURED",
+        "lastVerification": "Today 07:10 UTC",
+        "dataSource": "Mobile Medical Patrol",
+        "timestamp": "2024-07-05T07:10:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      },
+      {
+        "id": "COMM-MZ-04",
+        "code": "CAMP-MANGA",
+        "name": "Morigaon Highland Evacuation Camp",
+        "category": "AFFECTED_COMMUNITY",
+        "coordinates": [
+          26.1368,
+          91.5452
+        ],
+        "operationalStatus": "STABLE_MONITORED",
+        "storageCapacityM3": 400,
+        "availableResources": "19,000 displaced; 800 hygiene kits delivered",
+        "connectedFacilities": [
+          "FRRA-MZ-01"
+        ],
+        "routeAccessibility": "PASSABLE_HEAVY_TRUCK",
+        "securityAuthorization": "UN_SECURITY_CLEARED",
+        "lastVerification": "Today 06:45 UTC",
+        "dataSource": "Camp Administration",
+        "timestamp": "2024-07-05T06:45:00Z",
+        "isSimulated": true,
+        "isDemoData": true
+      }
+    ],
+    "routes": [
+      {
+        "id": "RT-MZ-SUP-CSD",
+        "name": "Commercial Supply Trunk Route",
+        "origin": "SUP-MZ-01 (Agro-Milling Silos)",
+        "destination": "CSD-MZ-01 (Central Staging Depot)",
+        "distanceKm": 8.5,
+        "estimatedTime": "22 mins",
+        "routeStatus": "PASSABLE_OPEN",
+        "transportMode": "Heavy Commercial Truck (20-Ton)",
+        "capacityRestrictions": "Standard Highway Weight Limit (30T)",
+        "physicalAccessibility": "PAVED_HIGHWAY_CLEARED",
+        "securityAuthorization": "CLEARED_COMMERCIAL",
+        "verificationTimestamp": "Today 07:15 UTC",
+        "disruptionReason": "None recorded; route inspected and dry.",
+        "points": [
+          [
+            26.0936,
+            91.5272
+          ],
+          [
+            26.09,
+            91.5344
+          ],
+          [
+            26.08496,
+            91.54232
+          ]
+        ],
+        "isSimulated": true
+      },
+      {
+        "id": "RT-MZ-CSD-DC1",
+        "name": "Urban Relief Corridor",
+        "origin": "CSD-MZ-01 (Central Staging Depot)",
+        "destination": "DC-MZ-01 (Sector 2 Hub)",
+        "distanceKm": 6.2,
+        "estimatedTime": "18 mins",
+        "routeStatus": "PASSABLE_OPEN",
+        "transportMode": "10-Ton Box Truck",
+        "capacityRestrictions": "10T limit on inner ring bypass bridge",
+        "physicalAccessibility": "PASSABLE_URBAN",
+        "securityAuthorization": "UN_SECURITY_CLEARED",
+        "verificationTimestamp": "Today 07:30 UTC",
+        "disruptionReason": "Light ponding on shoulders; main road dry.",
+        "points": [
+          [
+            26.08496,
+            91.54232
+          ],
+          [
+            26.09,
+            91.55096
+          ],
+          [
+            26.0972,
+            91.55816
+          ]
+        ],
+        "isSimulated": true
+      },
+      {
+        "id": "RT-MZ-CSD-DC2",
+        "name": "Coastal Highway Route rt-1 (Severed by Washout)",
+        "origin": "CSD-MZ-01 (Central Staging Depot)",
+        "destination": "DC-MZ-02 (East Distribution Centre)",
+        "distanceKm": 14.8,
+        "estimatedTime": "Blocked (+4.5 hr detour via rt-3)",
+        "routeStatus": "CONFIRMED_BLOCKED",
+        "transportMode": "Impassable to all vehicular freight",
+        "capacityRestrictions": "0T — Roadway physically breached",
+        "physicalAccessibility": "CULVERT_WASHOUT_KM42",
+        "securityAuthorization": "ROUTE_CLOSED_EMERGENCY",
+        "verificationTimestamp": "Today 07:45 UTC",
+        "disruptionReason": "Culvert washout at km 42; 6m wide channel opened by river surge.",
+        "points": [
+          [
+            26.08496,
+            91.54232
+          ],
+          [
+            26.0792,
+            91.5704
+          ],
+          [
+            26.0684,
+            91.5992
+          ]
+        ],
+        "isSimulated": true
+      },
+      {
+        "id": "RT-MZ-HIGH-BYPASS",
+        "name": "Highland Bypass Detour rt-3",
+        "origin": "FRRA-MZ-01 (North Logistics Base)",
+        "destination": "DC-MZ-02 (East Distribution Centre)",
+        "distanceKm": 28.4,
+        "estimatedTime": "1 hr 15 mins",
+        "routeStatus": "PROPOSED_ALTERNATIVE",
+        "transportMode": "10-Ton Heavy Logistics Truck",
+        "capacityRestrictions": "Narrow shoulders at ridge pass; daylight only",
+        "physicalAccessibility": "GRAVEL_HIGHWAY_PASSABLE",
+        "securityAuthorization": "OCHA_ESCORT_CLEARED",
+        "verificationTimestamp": "Today 08:00 UTC",
+        "disruptionReason": "Alternative route bypassing severed culvert km 42.",
+        "points": [
+          [
+            26.1476,
+            91.58264
+          ],
+          [
+            26.1224,
+            91.5884
+          ],
+          [
+            26.0684,
+            91.5992
+          ]
+        ],
+        "isSimulated": true
+      },
+      {
+        "id": "RT-MZ-BARGE",
+        "name": "River Pungue Barge Waterway rt-2",
+        "origin": "CSD-MZ-01 (Central Staging Depot)",
+        "destination": "BEN-MZ-01 (Delta Estuary Settlement)",
+        "distanceKm": 11,
+        "estimatedTime": "45 mins",
+        "routeStatus": "PASSABLE_OPEN",
+        "transportMode": "Shallow-Draft River Barge (BRG-02)",
+        "capacityRestrictions": "30 MT displacement limit; draft < 1.2m",
+        "physicalAccessibility": "NAVIGABLE_RIVER_CHANNEL",
+        "securityAuthorization": "MARITIME_PATROL_CLEARED",
+        "verificationTimestamp": "Today 08:10 UTC",
+        "disruptionReason": "None; river current monitored at 1.8 knots (PASS).",
+        "points": [
+          [
+            26.08496,
+            91.54232
+          ],
+          [
+            26.1044,
+            91.5308
+          ],
+          [
+            26.11592,
+            91.51712
+          ]
+        ],
+        "isSimulated": true
+      },
+      {
+        "id": "RT-MZ-MUD",
+        "name": "Riverdale Basin Mud Track",
+        "origin": "FRRA-MZ-01 (North Logistics Base)",
+        "destination": "COMM-MZ-03 (Riverdale Settlement Clinic)",
+        "distanceKm": 14.1,
+        "estimatedTime": "1 hr 30 mins",
+        "routeStatus": "RESTRICTED",
+        "transportMode": "4x4 Off-Road Logistics Unit with Winch",
+        "capacityRestrictions": "4x4 Vehicles only; max 2.5T load",
+        "physicalAccessibility": "SURFACE_MUD_IMPASSE",
+        "securityAuthorization": "UN_SECURITY_CLEARED",
+        "verificationTimestamp": "Today 08:15 UTC",
+        "disruptionReason": "20cm surface mud accumulation at km 6; winch assist active.",
+        "points": [
+          [
+            26.1476,
+            91.58264
+          ],
+          [
+            26.1224,
+            91.5236
+          ],
+          [
+            26.1008,
+            91.4876
+          ]
+        ],
+        "isSimulated": true
+      },
+      {
+        "id": "RT-MZ-EAST-UNKNOWN",
+        "name": "East Causeway Approach Route",
+        "origin": "DC-MZ-02 (East Distribution Centre)",
+        "destination": "BEN-MZ-02 (East Coastal Resettlement)",
+        "distanceKm": 5.2,
+        "estimatedTime": "Unknown (Assumed Unsafe)",
+        "routeStatus": "UNKNOWN",
+        "transportMode": "Scout Drone / Reconnaissance Patrol Only",
+        "capacityRestrictions": "No cargo vehicles permitted prior to hydro survey",
+        "physicalAccessibility": "UNKNOWN_ASSUMED_UNSAFE",
+        "securityAuthorization": "NOT_CLEARED",
+        "verificationTimestamp": "Awaiting Recon Flight",
+        "disruptionReason": "Tidal storm surge submersion reported; no field confirmation yet.",
+        "points": [
+          [
+            26.0684,
+            91.5992
+          ],
+          [
+            26.0648,
+            91.58696
+          ],
+          [
+            26.0612,
+            91.57616
+          ]
+        ],
+        "isSimulated": true
+      }
+    ],
+    "crisisOverlays": {
+      "affectedZones": [
+        {
+          "id": "FL-ZONE-01",
+          "name": "Estuary Flash Inundation Zone",
+          "center": [
+            26.1116,
+            91.5236
+          ],
+          "radiusMeters": 4500,
+          "color": "#3B82F6",
+          "fillOpacity": 0.18,
+          "description": "High water levels, 1.2m surge above seasonal baseline. 14,200 displaced.",
+          "status": "RISING"
+        },
+        {
+          "id": "FL-ZONE-02",
+          "name": "Barpeta River Delta Basin Flooding",
+          "center": [
+            26.0576,
+            91.4732
+          ],
+          "radiusMeters": 3800,
+          "color": "#3B82F6",
+          "fillOpacity": 0.15,
+          "description": "Agricultural land inundated. Roads constrained.",
+          "status": "PEAK_STABLE"
+        }
+      ],
+      "infrastructureDamage": [
+        {
+          "id": "DMG-01",
+          "name": "Culvert Structural Collapse km 42",
+          "coordinates": [
+            26.0792,
+            91.5704
+          ],
+          "severity": "CRITICAL",
+          "type": "WASHED_OUT_CULVERT",
+          "description": "Full width road breach. Engineering pontoon estimated at 48h."
+        },
+        {
+          "id": "DMG-02",
+          "name": "Pungue Causeway Siltation",
+          "coordinates": [
+            26.0648,
+            91.58696
+          ],
+          "severity": "WARNING",
+          "type": "SILT_DEBRIS",
+          "description": "Mud accumulation 0.8m deep across 300m length."
+        }
+      ],
+      "isolatedCommunities": [
+        "BEN-MZ-01",
+        "BEN-MZ-02"
+      ]
+    }
+  },
+  "allocation": {
+    "SUPPLY_CHAIN_NETWORK": {
+      "nodes": [
+        {
+          "id": "SUP-01",
+          "name": "Guwahati Agro-Milling & Port Terminal",
+          "echelon": "SUPPLIER",
+          "capacityM3": 25000,
+          "currentThroughput": 8500,
+          "stockAvailable": "12,000 MT Grain / Biscuits",
+          "bottleneck": null,
+          "status": "OPERATIONAL"
+        },
+        {
+          "id": "DNR-02",
+          "name": "ECHO / UNICEF Forward Staging Airhead",
+          "echelon": "SUPPLIER",
+          "capacityM3": 12000,
+          "currentThroughput": 4200,
+          "stockAvailable": "800 IEHK Kits, 5,000 Water Bladders",
+          "bottleneck": "Air-slot congestion (max 6 flights/day)",
+          "status": "CONSTRAINED"
+        },
+        {
+          "id": "CSD-01",
+          "name": "Central Staging Depot (CSD-01)",
+          "echelon": "TIER_1_DEPOT",
+          "capacityM3": 5000,
+          "utilizedM3": 3850,
+          "remainingCapacityM3": 1150,
+          "stockAvailable": "4,500 BP-5 Food pkts, 3,500 Potable Water 10L",
+          "bottleneck": "Staging bay near capacity (77% utilized)",
+          "status": "OPERATIONAL"
+        },
+        {
+          "id": "NLB-02",
+          "name": "North Logistics Base (NLB-02)",
+          "echelon": "TIER_1_DEPOT",
+          "capacityM3": 3500,
+          "utilizedM3": 3100,
+          "remainingCapacityM3": 400,
+          "stockAvailable": "2,200 Super Cereal pkts, 18,000L Raw Water (QC)",
+          "bottleneck": "Southward road access restricted at km 42",
+          "status": "CONSTRAINED"
+        },
+        {
+          "id": "FRRA-01",
+          "name": "Barpeta Estuary Riverine Staging Post",
+          "echelon": "TIER_2_FRRA",
+          "capacityM3": 1800,
+          "utilizedM3": 1200,
+          "remainingCapacityM3": 600,
+          "stockAvailable": "1,450 Food pkts, 1,200 Water cont",
+          "bottleneck": "Dependent on high-tide shallow barge convoy",
+          "status": "OPERATIONAL"
+        },
+        {
+          "id": "FRRA-02",
+          "name": "Morigaon Highway Forward Pad",
+          "echelon": "TIER_2_FRRA",
+          "capacityM3": 2000,
+          "utilizedM3": 1650,
+          "remainingCapacityM3": 350,
+          "stockAvailable": "3,200 Flour pkts, 4,200 Aquatabs",
+          "bottleneck": null,
+          "status": "OPERATIONAL"
+        },
+        {
+          "id": "DC-01",
+          "name": "Sector 2 Distribution Hub",
+          "echelon": "DISTRIBUTION_CENTRE",
+          "capacityM3": 800,
+          "utilizedM3": 600,
+          "remainingCapacityM3": 200,
+          "stockAvailable": "450 Food pkts buffer",
+          "bottleneck": null,
+          "status": "OPERATIONAL"
+        },
+        {
+          "id": "DC-02",
+          "name": "East Coastal Triage DC",
+          "echelon": "DISTRIBUTION_CENTRE",
+          "capacityM3": 1200,
+          "utilizedM3": 1100,
+          "remainingCapacityM3": 100,
+          "stockAvailable": "150 Water cont (near stockout)",
+          "bottleneck": "Highway washout bypass adds 4.5h transit",
+          "status": "CONSTRAINED"
+        },
+        {
+          "id": "BEN-01",
+          "name": "Delta Estuary IDP Settlement",
+          "echelon": "BENEFICIARY",
+          "population": 14200,
+          "demand": "1,450 Food pkts (CRITICAL)",
+          "fulfilled": "1,450 Food pkts (100% Met in Plan Alpha)",
+          "status": "PRIORITY_SATISFIED"
+        },
+        {
+          "id": "BEN-02",
+          "name": "Barpeta Island Cut-Off Community",
+          "echelon": "BENEFICIARY",
+          "population": 9800,
+          "demand": "2,800 Water cont (CRITICAL)",
+          "fulfilled": "2,800 Water cont (100% Met in Plan Alpha)",
+          "status": "PRIORITY_SATISFIED"
+        },
+        {
+          "id": "BEN-03",
+          "name": "Morigaon Camp Relocation Center",
+          "echelon": "BENEFICIARY",
+          "population": 26500,
+          "demand": "3,200 Food pkts, 4,200 Aquatabs",
+          "fulfilled": "2,800 Food, 3,800 Aquatabs (85% Met)",
+          "status": "SUBSTANTIALLY_MET"
+        },
+        {
+          "id": "BEN-04",
+          "name": "Dhubri Field Triage Clinic",
+          "echelon": "BENEFICIARY",
+          "population": 3200,
+          "demand": "45 IEHK Kits (CRITICAL)",
+          "fulfilled": "45 IEHK Kits (100% Met in Plan Alpha)",
+          "status": "PRIORITY_SATISFIED"
+        }
+      ],
+      "flows": [
+        {
+          "from": "SUP-01",
+          "to": "CSD-01",
+          "commodity": "FOOD",
+          "qty": 5000,
+          "unit": "pkts",
+          "mode": "Heavy Rail / Semi-Truck",
+          "status": "FLOWING"
+        },
+        {
+          "from": "DNR-02",
+          "to": "CSD-01",
+          "commodity": "MEDICAL",
+          "qty": 180,
+          "unit": "kits",
+          "mode": "Air Cargo Shuttle",
+          "status": "FLOWING"
+        },
+        {
+          "from": "CSD-01",
+          "to": "FRRA-01",
+          "commodity": "FOOD",
+          "qty": 1450,
+          "unit": "pkts",
+          "mode": "Shallow Barge Flotilla",
+          "status": "BOTTLENECK",
+          "note": "Tide-constrained"
+        },
+        {
+          "from": "CSD-01",
+          "to": "FRRA-01",
+          "commodity": "WATER",
+          "qty": 2800,
+          "unit": "containers",
+          "mode": "Shallow Barge Flotilla",
+          "status": "BOTTLENECK"
+        },
+        {
+          "from": "CSD-01",
+          "to": "FRRA-02",
+          "commodity": "FOOD",
+          "qty": 3200,
+          "unit": "pkts",
+          "mode": "Secured Convoy",
+          "status": "FLOWING"
+        },
+        {
+          "from": "FRRA-01",
+          "to": "BEN-01",
+          "commodity": "FOOD",
+          "qty": 1450,
+          "unit": "pkts",
+          "mode": "Amphibious Tractor",
+          "status": "FLOWING"
+        },
+        {
+          "from": "FRRA-01",
+          "to": "BEN-02",
+          "commodity": "WATER",
+          "qty": 2800,
+          "unit": "containers",
+          "mode": "Mi-8 Helicopter Sling",
+          "status": "FLOWING"
+        },
+        {
+          "from": "FRRA-02",
+          "to": "BEN-03",
+          "commodity": "FOOD",
+          "qty": 2800,
+          "unit": "pkts",
+          "mode": "10-Ton Truck",
+          "status": "FLOWING"
+        },
+        {
+          "from": "CSD-01",
+          "to": "BEN-04",
+          "commodity": "MEDICAL",
+          "qty": 45,
+          "unit": "kits",
+          "mode": "4WD Cold-Box Fleet",
+          "status": "FLOWING"
+        }
+      ]
+    },
+    "MOCK_PLANS": {
+      "PLAN-ALPHA": {
+        "id": "PLAN-ALPHA",
+        "name": "Plan Alpha: Multi-Objective Balanced Compromise (Recommended)",
+        "description": "Jointly optimizes human welfare, Sphere minimum standard compliance, and regional equity (Gini = 0.18).",
+        "isRecommended": true,
+        "solverStatus": "OPTIMAL_FEASIBLE",
+        "optimalityGapPct": 0.02,
+        "runtimeSeconds": 1.84,
+        "objectiveValue": 94.62,
+        "totalAllocatedUnits": 18350,
+        "totalVerifiedDemandUnits": 21200,
+        "overallCoveragePct": 86.5,
+        "criticalCoveragePct": 100,
+        "giniCoefficient": 0.18,
+        "feasibilityBadge": "OPTIMAL",
+        "allocations": [
+          {
+            "id": "ALC-001",
+            "demandId": "DEM-2024-061",
+            "sourceFacility": "Central Staging Depot (CSD-01)",
+            "sourceFacilityId": "CSD-01",
+            "destination": "Delta Estuary Evacuation Settlement",
+            "destinationRegion": "Barpeta District",
+            "commodity": "FOOD",
+            "item": "High-Energy Emergency Food Biscuits (BP-5)",
+            "allocatedQty": 1000,
+            "requiredQty": 1000,
+            "remainingDemand": 0,
+            "unit": "packets",
+            "route": "Route rt-4 (River Barge Flotilla)",
+            "expectedArrival": "Today 17:30 UTC",
+            "priority": "CRITICAL",
+            "destinationSelectedReason": "Sector contains 14,200 cut-off IDPs with 42% under-5 population and zero remaining biscuit stock.",
+            "bindingConstraints": "Barpeta River draft limits barge cargo capacity to 85 tons max; FEFO batch #24045 mandatory issue.",
+            "resourcesConsidered": "CSD-01 Lot 24045 (selected 1,000 pkts); NLB-02 Lot 24018 (rejected due to highway culvert washout).",
+            "unmetDemandReason": "None. 100% of verified critical demand fulfilled.",
+            "humanOverride": false
+          },
+          {
+            "id": "ALC-002",
+            "demandId": "DEM-2024-062",
+            "sourceFacility": "Central Staging Depot (CSD-01)",
+            "sourceFacilityId": "CSD-01",
+            "destination": "Barpeta Island Cut-Off Community",
+            "destinationRegion": "Barpeta District",
+            "commodity": "WATER",
+            "item": "Emergency Potable Water (10L Sealed Containers)",
+            "allocatedQty": 2200,
+            "requiredQty": 2200,
+            "remainingDemand": 0,
+            "unit": "containers",
+            "route": "Corridor Air-Sling (Mi-8 Cargo Winch)",
+            "expectedArrival": "Tomorrow 08:00 UTC",
+            "priority": "CRITICAL",
+            "destinationSelectedReason": "Island community completely isolated by floodwaters; flood silt destroyed 100% of open surface wells.",
+            "bindingConstraints": "Air transport cargo payload limits 2 sorties; strict WHO potable certification record QC-W-8812 required.",
+            "resourcesConsidered": "CSD-01 potable containers (selected 2,200); NLB-02 bulk water (rejected: pending laboratory QC clearance).",
+            "unmetDemandReason": "None. Complete verified life-saving demand met.",
+            "humanOverride": false
+          },
+          {
+            "id": "ALC-003",
+            "demandId": "DEM-2024-063",
+            "sourceFacility": "Central Staging Depot (CSD-01)",
+            "sourceFacilityId": "CSD-01",
+            "destination": "Dhubri Field Triage Clinic",
+            "destinationRegion": "Dhubri Basin",
+            "commodity": "MEDICAL",
+            "item": "Inter-Agency Emergency Health Kits (IEHK Basic 2024)",
+            "allocatedQty": 30,
+            "requiredQty": 30,
+            "remainingDemand": 0,
+            "unit": "kits",
+            "route": "North Bypass Route (4WD Vehicle)",
+            "expectedArrival": "Today 19:00 UTC",
+            "priority": "CRITICAL",
+            "destinationSelectedReason": "Acute surgical and maternity emergency clinic with post-flood cholera outbreak surveillance.",
+            "bindingConstraints": "Cold-chain +2°C to +8°C transport requirement; MSF clinical certification verified.",
+            "resourcesConsidered": "CSD-01 Lot 24099 (selected 30 kits); Quarantined vaccine lot 23880 excluded automatically.",
+            "unmetDemandReason": "None. Full critical quota fulfilled.",
+            "humanOverride": false
+          },
+          {
+            "id": "ALC-004",
+            "demandId": "DEM-2024-064",
+            "sourceFacility": "Central Staging Depot (CSD-01)",
+            "sourceFacilityId": "CSD-01",
+            "destination": "Morigaon Camp Relocation Center",
+            "destinationRegion": "Morigaon IDP Hub",
+            "commodity": "WATER",
+            "item": "Water Purification Tablets (Aquatabs 67mg / 1000s)",
+            "allocatedQty": 1400,
+            "requiredQty": 1400,
+            "remainingDemand": 0,
+            "unit": "containers",
+            "route": "Highway East Convoy (10-Ton Truck)",
+            "expectedArrival": "Tomorrow 10:30 UTC",
+            "priority": "HIGH",
+            "destinationSelectedReason": "Dense 26,500 IDP relocation hub with high waterborne epidemic transmission risk.",
+            "bindingConstraints": "Truck convoy capacity; depot staging dispatch threshold.",
+            "resourcesConsidered": "CSD-01 Aquatabs stockpile (selected 1,400 boxes).",
+            "unmetDemandReason": "None. Fulfilled in full.",
+            "humanOverride": false
+          },
+          {
+            "id": "ALC-005",
+            "demandId": "DEM-2024-065",
+            "sourceFacility": "North Logistics Base (NLB-02)",
+            "sourceFacilityId": "NLB-02",
+            "destination": "Morigaon Camp Relocation Center",
+            "destinationRegion": "Morigaon IDP Hub",
+            "commodity": "FOOD",
+            "item": "Fortified Maize Flour (Super Cereal Plus)",
+            "allocatedQty": 1000,
+            "requiredQty": 1400,
+            "remainingDemand": 400,
+            "unit": "packets",
+            "route": "Alternative North Road (Bypassing km 42)",
+            "expectedArrival": "Tomorrow 14:00 UTC",
+            "priority": "HIGH",
+            "destinationSelectedReason": "Substantial IDP food ration requirement; North base holds 2,200 verified packets.",
+            "bindingConstraints": "15% safety reserve retained at NLB-02 depot for sudden surge; transit detour added 3.5h.",
+            "resourcesConsidered": "NLB-02 Lot 24018 (allocated 1,000 pkts); 400 pkts held in depot safety buffer.",
+            "unmetDemandReason": "400 packets held to maintain non-zero safety inventory across regional depots in case of rainstorm recurrence.",
+            "humanOverride": false
+          },
+          {
+            "id": "ALC-006",
+            "demandId": "DEM-2024-069",
+            "sourceFacility": "Central Staging Depot (CSD-01)",
+            "sourceFacilityId": "CSD-01",
+            "destination": "St. Teresa Vulnerable Care Sanctuary",
+            "destinationRegion": "Morigaon IDP Hub",
+            "commodity": "FOOD",
+            "item": "High-Energy Emergency Food Biscuits (BP-5)",
+            "allocatedQty": 400,
+            "requiredQty": 400,
+            "remainingDemand": 0,
+            "unit": "packets",
+            "route": "Urban Secondary Arterial",
+            "expectedArrival": "Tomorrow 11:00 UTC",
+            "priority": "MEDIUM",
+            "destinationSelectedReason": "1,450 orphans and elderly residents requiring supplementary feeding.",
+            "bindingConstraints": "FEFO stock rotation priority.",
+            "resourcesConsidered": "CSD-01 remaining stock (allocated 400 pkts).",
+            "unmetDemandReason": "None. Second delivery cycle completed.",
+            "humanOverride": false
+          }
+        ]
+      },
+      "PLAN-BETA": {
+        "id": "PLAN-BETA",
+        "name": "Plan Beta: Highway Speed Push (Throughput First)",
+        "description": "Prioritizes immediate high-tonnage ground delivery via accessible roads, sacrificing equity in cut-off river pockets.",
+        "isRecommended": false,
+        "solverStatus": "FEASIBLE_SUBOPTIMAL",
+        "optimalityGapPct": 2.45,
+        "runtimeSeconds": 0.92,
+        "objectiveValue": 81.3,
+        "totalAllocatedUnits": 19500,
+        "totalVerifiedDemandUnits": 21200,
+        "overallCoveragePct": 91.9,
+        "criticalCoveragePct": 75,
+        "giniCoefficient": 0.38,
+        "feasibilityBadge": "SUBOPTIMAL",
+        "allocations": []
+      },
+      "PLAN-GAMMA": {
+        "id": "PLAN-GAMMA",
+        "name": "Plan Gamma: High Reserve Retention (Conservative)",
+        "description": "Retains 25% safety reserve buffers at central depots in anticipation of tropical depression Category 3 upgrade.",
+        "isRecommended": false,
+        "solverStatus": "FEASIBLE_SUBOPTIMAL",
+        "optimalityGapPct": 4.1,
+        "runtimeSeconds": 1.15,
+        "objectiveValue": 78.4,
+        "totalAllocatedUnits": 14200,
+        "totalVerifiedDemandUnits": 21200,
+        "overallCoveragePct": 66.9,
+        "criticalCoveragePct": 100,
+        "giniCoefficient": 0.22,
+        "feasibilityBadge": "CONSERVATIVE",
+        "allocations": []
+      }
+    },
+    "MOCK_PLAN_HISTORY": [
+      {
+        "version": "v2.4-Alpha",
+        "planId": "PLAN-ALPHA",
+        "createdAt": "2024-07-05T08:30:00Z",
+        "author": "HiGHS MILP Solver Engine",
+        "status": "PENDING_HUMAN_APPROVAL",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "welfareScore": 94.62,
+        "criticalCoverage": "100%",
+        "notes": "Primary recommended plan generated following ground reconnaissance verification."
+      },
+      {
+        "version": "v2.3-Initial",
+        "planId": "PLAN-INITIAL",
+        "createdAt": "2024-07-04T19:00:00Z",
+        "author": "HiGHS MILP Solver Engine",
+        "status": "MODIFICATION_REQUESTED",
+        "reviewedBy": "Operational Commander S. Vance",
+        "reviewedAt": "2024-07-04T20:15:00Z",
+        "welfareScore": 89.2,
+        "criticalCoverage": "92%",
+        "notes": "Requested modification: enforce shallow barge air-draft restrictions on Barpeta River corridor."
+      },
+      {
+        "version": "v2.2-Pre-Recon",
+        "planId": "PLAN-OLD",
+        "createdAt": "2024-07-04T11:00:00Z",
+        "author": "Automated Surge Optimizer",
+        "status": "REJECTED",
+        "reviewedBy": "Logistics Director M. Chen",
+        "reviewedAt": "2024-07-04T12:30:00Z",
+        "welfareScore": 74.5,
+        "criticalCoverage": "78%",
+        "notes": "Rejected due to inclusion of unverified crowd-sourced claims exceeding depot capacity."
+      }
+    ],
+    "ALLOCATION_ANALYTICS": {
+      "supplyDemandGap": [
+        {
+          "commodity": "Food (pkts)",
+          "supply": 8500,
+          "demand": 7050,
+          "allocated": 6200,
+          "unmet": 850
+        },
+        {
+          "commodity": "Water (10L)",
+          "supply": 3500,
+          "demand": 8800,
+          "allocated": 3500,
+          "unmet": 5300
+        },
+        {
+          "commodity": "Medical (kits)",
+          "supply": 180,
+          "demand": 165,
+          "allocated": 165,
+          "unmet": 0
+        }
+      ],
+      "regionalDistribution": [
+        {
+          "region": "Barpeta District",
+          "demand": 9250,
+          "allocated": 6050,
+          "coveragePct": 65.4,
+          "fill": "#176B76"
+        },
+        {
+          "region": "Morigaon IDP Hub",
+          "demand": 8200,
+          "allocated": 7200,
+          "coveragePct": 87.8,
+          "fill": "#142B43"
+        },
+        {
+          "region": "Dhubri Basin",
+          "demand": 1845,
+          "allocated": 1845,
+          "coveragePct": 100,
+          "fill": "#27856F"
+        },
+        {
+          "region": "Bajali Corridor",
+          "demand": 950,
+          "allocated": 950,
+          "coveragePct": 100,
+          "fill": "#60758A"
+        }
+      ],
+      "facilityUtilization": [
+        {
+          "facility": "Central Staging Depot",
+          "utilized": 3850,
+          "capacity": 5000,
+          "pct": 77
+        },
+        {
+          "facility": "North Logistics Base",
+          "utilized": 3100,
+          "capacity": 3500,
+          "pct": 88
+        },
+        {
+          "facility": "Barpeta Estuary FRRA",
+          "utilized": 1200,
+          "capacity": 1800,
+          "pct": 67
+        },
+        {
+          "facility": "Morigaon Forward Pad",
+          "utilized": 1650,
+          "capacity": 2000,
+          "pct": 82
+        }
+      ],
+      "criticalCoverage": [
+        {
+          "category": "Critical (<24h)",
+          "total": 3,
+          "satisfied": 3,
+          "coveragePct": 100,
+          "fill": "#27856F"
+        },
+        {
+          "category": "High (24-48h)",
+          "total": 2,
+          "satisfied": 2,
+          "coveragePct": 100,
+          "fill": "#176B76"
+        },
+        {
+          "category": "Medium (48-72h)",
+          "total": 2,
+          "satisfied": 1,
+          "coveragePct": 50,
+          "fill": "#D99A35"
+        },
+        {
+          "category": "Normal (>72h)",
+          "total": 1,
+          "satisfied": 0,
+          "coveragePct": 0,
+          "fill": "#60758A"
+        }
+      ],
+      "unmetDemandByRegion": [
+        {
+          "region": "Barpeta District",
+          "unmetFood": 0,
+          "unmetWater": 3200,
+          "unmetMedical": 0
+        },
+        {
+          "region": "Morigaon IDP Hub",
+          "unmetFood": 400,
+          "unmetWater": 600,
+          "unmetMedical": 0
+        },
+        {
+          "region": "Dhubri Basin",
+          "unmetFood": 0,
+          "unmetWater": 0,
+          "unmetMedical": 0
+        },
+        {
+          "region": "Bajali Corridor",
+          "unmetFood": 0,
+          "unmetWater": 0,
+          "unmetMedical": 0
+        }
+      ],
+      "equityFairShare": [
+        {
+          "group": "Delta Estuary IDP",
+          "population": 14200,
+          "fairSharePct": 24.5,
+          "actualReceivedPct": 26.2,
+          "deviation": "+1.7%"
+        },
+        {
+          "group": "Barpeta Island Cut-Off",
+          "population": 9800,
+          "fairSharePct": 16.9,
+          "actualReceivedPct": 18.5,
+          "deviation": "+1.6%"
+        },
+        {
+          "group": "Morigaon Relocation Camp",
+          "population": 26500,
+          "fairSharePct": 45.8,
+          "actualReceivedPct": 43.1,
+          "deviation": "-2.7%"
+        },
+        {
+          "group": "Dhubri Clinic",
+          "population": 3200,
+          "fairSharePct": 5.5,
+          "actualReceivedPct": 5.8,
+          "deviation": "+0.3%"
+        },
+        {
+          "group": "St. Teresa Sanctuary",
+          "population": 1450,
+          "fairSharePct": 2.5,
+          "actualReceivedPct": 2.6,
+          "deviation": "+0.1%"
+        },
+        {
+          "group": "Bajali Shelter",
+          "population": 8600,
+          "fairSharePct": 4.8,
+          "actualReceivedPct": 3.8,
+          "deviation": "-1.0%"
+        }
+      ],
+      "allocationByCommodity": [
+        {
+          "name": "Food Supplies (BP-5 & Flour)",
+          "allocated": 6200,
+          "target": 7050,
+          "unit": "packets",
+          "color": "#142B43"
+        },
+        {
+          "name": "Safe Water (10L Containers)",
+          "allocated": 3500,
+          "target": 8800,
+          "unit": "containers",
+          "color": "#176B76"
+        },
+        {
+          "name": "Medical Supplies (IEHK Kits)",
+          "allocated": 165,
+          "target": 165,
+          "unit": "kits",
+          "color": "#27856F"
+        }
+      ]
+    }
+  },
+  "recovery": {
+    "BASELINE_PLAN": {
+      "incidentId": "INC-2026-0412",
+      "incidentName": "Brahmaputra Monsoon Floods 2024 (Inundation & Estuary Surge)",
+      "planId": "PLAN-ALPHA",
+      "planVersion": "v2.4-Alpha",
+      "snapshotId": "SNAP-2024-07-05-0830",
+      "planningPeriod": "72h Tactical Cycle",
+      "availableResources": 24000,
+      "verifiedDemand": 21200,
+      "plannedAllocations": 18350,
+      "operationalFacilitiesCount": 7,
+      "accessibleRoutesCount": 5,
+      "baselineUnmetDemand": 2850,
+      "criticalCoveragePct": 100,
+      "serviceEquityGini": 0.18,
+      "expectedCostUSD": 142000,
+      "status": "BASELINE"
+    },
+    "DISRUPTION_TEMPLATES": {
+      "FLOOD": {
+        "id": "SCEN-FLOOD-01",
+        "category": "FLOOD",
+        "name": "Major Culvert Washout & Flash Riverine Inundation",
+        "description": "Catastrophic rain surge causes culvert collapse on Highway rt-1 at km 42, severing main road transit to Barpeta District.",
+        "parameters": [
+          {
+            "id": "p1",
+            "name": "Route Disruption",
+            "target": "Route rt-1 (Km 42 Culvert)",
+            "value": "100% Impassable (Washout)",
+            "severity": "CRITICAL"
+          },
+          {
+            "id": "p2",
+            "name": "Bridge Submersion",
+            "target": "Barpeta River Main Crossing",
+            "value": "Water Level +2.4m Above Deck",
+            "severity": "CRITICAL"
+          },
+          {
+            "id": "p3",
+            "name": "Warehouse Flooding",
+            "target": "CSD-01 Staging Bay A-04",
+            "value": "1,200 Food pkts Damaged / Unusable",
+            "severity": "HIGH"
+          },
+          {
+            "id": "p4",
+            "name": "Isolated Populations",
+            "target": "Delta Estuary & Barpeta Island",
+            "value": "Cut off from wheeled truck transit",
+            "severity": "CRITICAL"
+          },
+          {
+            "id": "p5",
+            "name": "Transport Capacity Loss",
+            "target": "Regional Heavy Truck Fleet",
+            "value": "-60% Throughput on southern corridor",
+            "severity": "HIGH"
+          }
+        ],
+        "durationHours": 48,
+        "estimatedUnmetSurge": 4650
+      },
+      "CONFLICT": {
+        "id": "SCEN-CONFLICT-02",
+        "category": "ARMED_CONFLICT",
+        "name": "Corridor Security Interruption & Perimeter Blockade",
+        "description": "Security forces establish checkpoint exclusion zones along Route rt-3, preventing commercial transport movement.",
+        "parameters": [
+          {
+            "id": "p1",
+            "name": "Facility Inaccessibility",
+            "target": "North Logistics Base (NLB-02)",
+            "value": "Security Perimeter Lockdown (0 dispatch)",
+            "severity": "CRITICAL"
+          },
+          {
+            "id": "p2",
+            "name": "Route Restriction",
+            "target": "Route rt-3 Highway Corridor",
+            "value": "Checkpoints Require UN Military Escort",
+            "severity": "HIGH"
+          },
+          {
+            "id": "p3",
+            "name": "Supplier Interruption",
+            "target": "Guwahati Agro-Milling (SUP-01)",
+            "value": "Terminal Grid Power Outage",
+            "severity": "MEDIUM"
+          },
+          {
+            "id": "p4",
+            "name": "Displacement Demand Surge",
+            "target": "Morigaon Camp Relocation Center",
+            "value": "+5,000 Newly Arrived IDPs",
+            "severity": "CRITICAL"
+          }
+        ],
+        "durationHours": 72,
+        "estimatedUnmetSurge": 6800
+      },
+      "PANDEMIC": {
+        "id": "SCEN-PANDEMIC-03",
+        "category": "PANDEMIC",
+        "name": "Acute Waterborne Cholera Outbreak & Cold-Chain Failure",
+        "description": "Spike in cholera cases triggers sudden demand surge for rehydration salts while vaccine depot experiences cold-chain excursion.",
+        "parameters": [
+          {
+            "id": "p1",
+            "name": "Acute Demand Surge",
+            "target": "ORS & Cholera Treatment Packs",
+            "value": "+250% Demand Spike (120 -> 420 kits)",
+            "severity": "CRITICAL"
+          },
+          {
+            "id": "p2",
+            "name": "Potable Water Surge",
+            "target": "Safe Water 10L Containers",
+            "value": "+180% Demand in Unsanitary Pockets",
+            "severity": "CRITICAL"
+          },
+          {
+            "id": "p3",
+            "name": "Facility Staff Quarantine",
+            "target": "Central Staging Depot",
+            "value": "-35% Workforce In Quarantine",
+            "severity": "HIGH"
+          },
+          {
+            "id": "p4",
+            "name": "Cold-Chain Failure",
+            "target": "Refrigerated Storage Room C-01",
+            "value": "+12.5°C Excursion Breach (Vaccines Locked)",
+            "severity": "CRITICAL"
+          }
+        ],
+        "durationHours": 36,
+        "estimatedUnmetSurge": 5200
+      }
+    },
+    "NETWORK_STATES": {
+      "BASELINE": {
+        "label": "BASELINE NETWORK",
+        "statusVariant": "success",
+        "description": "Nominal operational state. All 5 transport corridors open, all 7 staging nodes functional.",
+        "nodes": [
+          {
+            "id": "SUP-01",
+            "name": "Guwahati Port Terminal",
+            "state": "OPERATIONAL"
+          },
+          {
+            "id": "CSD-01",
+            "name": "Central Depot",
+            "state": "OPERATIONAL"
+          },
+          {
+            "id": "NLB-02",
+            "name": "North Logistics Base",
+            "state": "OPERATIONAL"
+          },
+          {
+            "id": "FRRA-01",
+            "name": "Barpeta Estuary FRRA",
+            "state": "OPERATIONAL"
+          },
+          {
+            "id": "FRRA-02",
+            "name": "Morigaon Highway Pad",
+            "state": "OPERATIONAL"
+          },
+          {
+            "id": "BEN-01",
+            "name": "Delta Estuary IDP",
+            "state": "SUPPLIED"
+          },
+          {
+            "id": "BEN-02",
+            "name": "Barpeta Cut-Off Island",
+            "state": "SUPPLIED"
+          },
+          {
+            "id": "BEN-03",
+            "name": "Morigaon Relocation Camp",
+            "state": "SUPPLIED"
+          }
+        ],
+        "connections": [
+          {
+            "from": "SUP-01",
+            "to": "CSD-01",
+            "state": "NORMAL",
+            "throughput": "100%"
+          },
+          {
+            "from": "CSD-01",
+            "to": "FRRA-01",
+            "state": "NORMAL",
+            "throughput": "100%"
+          },
+          {
+            "from": "CSD-01",
+            "to": "FRRA-02",
+            "state": "NORMAL",
+            "throughput": "100%"
+          },
+          {
+            "from": "FRRA-01",
+            "to": "BEN-01",
+            "state": "NORMAL",
+            "throughput": "100%"
+          },
+          {
+            "from": "FRRA-01",
+            "to": "BEN-02",
+            "state": "NORMAL",
+            "throughput": "100%"
+          },
+          {
+            "from": "FRRA-02",
+            "to": "BEN-03",
+            "state": "NORMAL",
+            "throughput": "100%"
+          }
+        ]
+      },
+      "DISRUPTED": {
+        "label": "DISRUPTED NETWORK STATE",
+        "statusVariant": "critical",
+        "description": "Culvert washout at km 42 severs Route rt-1. FRRA-01 and isolated communities cut off from road supply.",
+        "nodes": [
+          {
+            "id": "SUP-01",
+            "name": "Guwahati Port Terminal",
+            "state": "OPERATIONAL"
+          },
+          {
+            "id": "CSD-01",
+            "name": "Central Depot",
+            "state": "PARTIALLY_FLOODED"
+          },
+          {
+            "id": "NLB-02",
+            "name": "North Logistics Base",
+            "state": "ISOLATED"
+          },
+          {
+            "id": "FRRA-01",
+            "name": "Barpeta Estuary FRRA",
+            "state": "CUT_OFF"
+          },
+          {
+            "id": "FRRA-02",
+            "name": "Morigaon Highway Pad",
+            "state": "OPERATIONAL"
+          },
+          {
+            "id": "BEN-01",
+            "name": "Delta Estuary IDP",
+            "state": "STARVED_DEFICIT"
+          },
+          {
+            "id": "BEN-02",
+            "name": "Barpeta Cut-Off Island",
+            "state": "STARVED_DEFICIT"
+          },
+          {
+            "id": "BEN-03",
+            "name": "Morigaon Relocation Camp",
+            "state": "CONSTRAINED"
+          }
+        ],
+        "connections": [
+          {
+            "from": "SUP-01",
+            "to": "CSD-01",
+            "state": "NORMAL",
+            "throughput": "100%"
+          },
+          {
+            "from": "CSD-01",
+            "to": "FRRA-01",
+            "state": "SEVERED_WASHOUT",
+            "throughput": "0% (BLOCKED)"
+          },
+          {
+            "from": "CSD-01",
+            "to": "FRRA-02",
+            "state": "NORMAL",
+            "throughput": "100%"
+          },
+          {
+            "from": "FRRA-01",
+            "to": "BEN-01",
+            "state": "CRITICAL_DEFICIT",
+            "throughput": "15%"
+          },
+          {
+            "from": "FRRA-01",
+            "to": "BEN-02",
+            "state": "CRITICAL_DEFICIT",
+            "throughput": "0%"
+          },
+          {
+            "from": "FRRA-02",
+            "to": "BEN-03",
+            "state": "NORMAL",
+            "throughput": "85%"
+          }
+        ]
+      },
+      "RECOVERED": {
+        "label": "PROPOSED RECOVERED NETWORK",
+        "statusVariant": "teal",
+        "description": "Shallow-draft river barge flotilla and Mi-8 helicopter winch activated. Bypasses km 42 washout.",
+        "nodes": [
+          {
+            "id": "SUP-01",
+            "name": "Guwahati Port Terminal",
+            "state": "OPERATIONAL"
+          },
+          {
+            "id": "CSD-01",
+            "name": "Central Depot",
+            "state": "RECONFIGURED"
+          },
+          {
+            "id": "NLB-02",
+            "name": "North Logistics Base",
+            "state": "REROUTED"
+          },
+          {
+            "id": "FRRA-01",
+            "name": "Barpeta Estuary FRRA",
+            "state": "BARGE_CONNECTED"
+          },
+          {
+            "id": "FRRA-02",
+            "name": "Morigaon Highway Pad",
+            "state": "OPERATIONAL"
+          },
+          {
+            "id": "BEN-01",
+            "name": "Delta Estuary IDP",
+            "state": "RESTORED"
+          },
+          {
+            "id": "BEN-02",
+            "name": "Barpeta Cut-Off Island",
+            "state": "AIR_RESTORED"
+          },
+          {
+            "id": "BEN-03",
+            "name": "Morigaon Relocation Camp",
+            "state": "RESTORED"
+          }
+        ],
+        "connections": [
+          {
+            "from": "SUP-01",
+            "to": "CSD-01",
+            "state": "NORMAL",
+            "throughput": "100%"
+          },
+          {
+            "from": "CSD-01",
+            "to": "FRRA-01",
+            "state": "BARGE_BYPASS_ACTIVATED",
+            "throughput": "90% (VIA WATERWAY)"
+          },
+          {
+            "from": "CSD-01",
+            "to": "FRRA-02",
+            "state": "NORMAL",
+            "throughput": "100%"
+          },
+          {
+            "from": "FRRA-01",
+            "to": "BEN-01",
+            "state": "AMPHIBIOUS_RESTORED",
+            "throughput": "100%"
+          },
+          {
+            "from": "CSD-01",
+            "to": "BEN-02",
+            "state": "AIR_SLING_RESTORED",
+            "throughput": "100% (HELICOPTER)"
+          },
+          {
+            "from": "FRRA-02",
+            "to": "BEN-03",
+            "state": "NORMAL",
+            "throughput": "95%"
+          }
+        ]
+      }
+    },
+    "MOCK_RECOVERY_STRATEGIES": [
+      {
+        "id": "STRAT-ALPHA",
+        "name": "Strategy Alpha: River Barge Flotilla & Aerial Winch Surge",
+        "description": "Mobilizes 2 shallow-draft river barges and Mi-8 helicopter cargo sling to bypass submerged roads.",
+        "isRecommended": true,
+        "feasibility": "FEASIBLE",
+        "riskLevel": "LOW",
+        "criticalCoveragePct": 100,
+        "remainingUnmetDemand": 650,
+        "worstNormalizedShortagePct": 4.8,
+        "serviceEquityGini": 0.19,
+        "expectedRecoveryTimeHours": 14.5,
+        "resourceWastageUnits": 45,
+        "operatingCostUSD": 184500,
+        "costDeltaUSD": "+42,500",
+        "timeDeltaHours": "+6.5h vs Baseline",
+        "actionsApplied": [
+          "Alternative Route: Barpeta River Estuary Waterway Corridor",
+          "Vehicle Reassignment: 2 Shallow-Draft Barges + 1 Mi-8 Cargo Helicopter",
+          "Inter-Facility Transfer: 1,800 Water Containers NLB-02 -> CSD-01",
+          "Shipment Splitting: 50% Immediate Air Triage, 50% Barge Follow-up"
+        ]
+      },
+      {
+        "id": "STRAT-BETA",
+        "name": "Strategy Beta: High-Ground Northern Road Convoy Detour",
+        "description": "Diverts heavy 10-ton truck convoys through unflooded Northern highland routes, avoiding water transport entirely.",
+        "isRecommended": false,
+        "feasibility": "FEASIBLE",
+        "riskLevel": "MEDIUM",
+        "criticalCoveragePct": 78.5,
+        "remainingUnmetDemand": 2450,
+        "worstNormalizedShortagePct": 35.2,
+        "serviceEquityGini": 0.36,
+        "expectedRecoveryTimeHours": 28,
+        "resourceWastageUnits": 120,
+        "operatingCostUSD": 161000,
+        "costDeltaUSD": "+19,000",
+        "timeDeltaHours": "+20.0h Detour",
+        "actionsApplied": [
+          "Alternative Route: North Highland Unpaved Bypass (+115 km)",
+          "Vehicle Reassignment: Reassign 8 Trucks to Convoy Detour",
+          "Demand Reprioritization: Defer Island delivery until waters recede"
+        ]
+      },
+      {
+        "id": "STRAT-GAMMA",
+        "name": "Strategy Gamma: Aggressive Demand Triage & Local Voucher Sourcing",
+        "description": "Authorizes emergency local market vendor procurement and temporary reduction of ration caloric targets.",
+        "isRecommended": false,
+        "feasibility": "CONSTRAINED",
+        "riskLevel": "HIGH",
+        "criticalCoveragePct": 92,
+        "remainingUnmetDemand": 1800,
+        "worstNormalizedShortagePct": 18,
+        "serviceEquityGini": 0.28,
+        "expectedRecoveryTimeHours": 19.5,
+        "resourceWastageUnits": 15,
+        "operatingCostUSD": 198000,
+        "costDeltaUSD": "+56,000",
+        "timeDeltaHours": "+11.5h Intake",
+        "actionsApplied": [
+          "Emergency Procurement: Local Guwahati grain milling cash vouchers",
+          "Approved Demand Reprioritization: Caloric intake reduced to 1,800 kcal/day",
+          "Facility Activation: Emergency Staging Hub C"
+        ]
+      }
+    ],
+    "RECOVERY_ANALYTICS": {
+      "strategyComparison": [
+        {
+          "metric": "Critical Coverage (%)",
+          "baseline": 100,
+          "disrupted": 42,
+          "stratAlpha": 100,
+          "stratBeta": 78,
+          "stratGamma": 92
+        },
+        {
+          "metric": "Equity Index (1-Gini %)",
+          "baseline": 82,
+          "disrupted": 45,
+          "stratAlpha": 81,
+          "stratBeta": 64,
+          "stratGamma": 72
+        },
+        {
+          "metric": "Recovery Speed (%)",
+          "baseline": 100,
+          "disrupted": 20,
+          "stratAlpha": 82,
+          "stratBeta": 52,
+          "stratGamma": 74
+        }
+      ],
+      "monteCarloDistribution": [
+        {
+          "bin": "40-50% (Catastrophic)",
+          "runsDisrupted": 285,
+          "runsAlpha": 0,
+          "runsBeta": 42
+        },
+        {
+          "bin": "50-60%",
+          "runsDisrupted": 145,
+          "runsAlpha": 0,
+          "runsBeta": 68
+        },
+        {
+          "bin": "60-70%",
+          "runsDisrupted": 55,
+          "runsAlpha": 12,
+          "runsBeta": 140
+        },
+        {
+          "bin": "70-80%",
+          "runsDisrupted": 15,
+          "runsAlpha": 48,
+          "runsBeta": 165
+        },
+        {
+          "bin": "80-90% (Good)",
+          "runsDisrupted": 0,
+          "runsAlpha": 195,
+          "runsBeta": 75
+        },
+        {
+          "bin": "90-100% (Optimal)",
+          "runsDisrupted": 0,
+          "runsAlpha": 245,
+          "runsBeta": 10
+        }
+      ],
+      "recoveryTimeDistribution": [
+        {
+          "strategy": "Disrupted (No Action)",
+          "min": 72,
+          "q1": 85,
+          "median": 96,
+          "q3": 120,
+          "max": 144
+        },
+        {
+          "strategy": "Strat Alpha (Barge/Air)",
+          "min": 10,
+          "q1": 12,
+          "median": 14.5,
+          "q3": 18,
+          "max": 24
+        },
+        {
+          "strategy": "Strat Beta (Detour)",
+          "min": 20,
+          "q1": 24,
+          "median": 28,
+          "q3": 36,
+          "max": 48
+        },
+        {
+          "strategy": "Strat Gamma (Triage)",
+          "min": 14,
+          "q1": 16,
+          "median": 19.5,
+          "q3": 26,
+          "max": 32
+        }
+      ],
+      "shortageDistribution": [
+        {
+          "group": "Delta Estuary IDP",
+          "disruptedShortage": 1450,
+          "recoveredShortage": 0,
+          "unit": "pkts"
+        },
+        {
+          "group": "Barpeta Cut-Off Island",
+          "disruptedShortage": 2800,
+          "recoveredShortage": 0,
+          "unit": "containers"
+        },
+        {
+          "group": "Morigaon Relocation Camp",
+          "disruptedShortage": 1800,
+          "recoveredShortage": 400,
+          "unit": "pkts"
+        },
+        {
+          "group": "Dhubri Clinic",
+          "disruptedShortage": 30,
+          "recoveredShortage": 0,
+          "unit": "kits"
+        }
+      ],
+      "cvarComparison": [
+        {
+          "strategy": "Disrupted State",
+          "expectedLoss": 4650,
+          "cvar95": 5850,
+          "riskTier": "HIGH_RISK"
+        },
+        {
+          "strategy": "Strategy Alpha",
+          "expectedLoss": 650,
+          "cvar95": 890,
+          "riskTier": "LOW_RISK"
+        },
+        {
+          "strategy": "Strategy Beta",
+          "expectedLoss": 2450,
+          "cvar95": 3400,
+          "riskTier": "MEDIUM_RISK"
+        },
+        {
+          "strategy": "Strategy Gamma",
+          "expectedLoss": 1800,
+          "cvar95": 2350,
+          "riskTier": "MEDIUM_RISK"
+        }
+      ],
+      "scenarioComparison": [
+        {
+          "scenario": "Flood (Km 42 Washout)",
+          "demandCoverage": 96.5,
+          "recoveryHours": 14.5,
+          "costUSD": 184500
+        },
+        {
+          "scenario": "Armed Conflict (Checkpoints)",
+          "demandCoverage": 88,
+          "recoveryHours": 24,
+          "costUSD": 215000
+        },
+        {
+          "scenario": "Pandemic (Cholera Outbreak)",
+          "demandCoverage": 92.5,
+          "recoveryHours": 18,
+          "costUSD": 195000
+        }
+      ],
+      "recoveryTimeline": [
+        {
+          "hour": "0h",
+          "baseline": 100,
+          "disrupted": 38,
+          "stratAlpha": 38,
+          "stratBeta": 38
+        },
+        {
+          "hour": "8h",
+          "baseline": 100,
+          "disrupted": 38,
+          "stratAlpha": 55,
+          "stratBeta": 42
+        },
+        {
+          "hour": "16h",
+          "baseline": 100,
+          "disrupted": 38,
+          "stratAlpha": 88,
+          "stratBeta": 54
+        },
+        {
+          "hour": "24h",
+          "baseline": 100,
+          "disrupted": 38,
+          "stratAlpha": 96,
+          "stratBeta": 72
+        },
+        {
+          "hour": "48h",
+          "baseline": 100,
+          "disrupted": 38,
+          "stratAlpha": 98,
+          "stratBeta": 82
+        },
+        {
+          "hour": "72h",
+          "baseline": 100,
+          "disrupted": 38,
+          "stratAlpha": 100,
+          "stratBeta": 88
+        }
+      ],
+      "resourceUtilizationAfterRecovery": [
+        {
+          "asset": "Central Depot Capacity",
+          "before": 77,
+          "after": 84,
+          "unit": "% space"
+        },
+        {
+          "asset": "River Barge Flotilla",
+          "before": 0,
+          "after": 92,
+          "unit": "% fleet"
+        },
+        {
+          "asset": "Helicopter Winch Cargo",
+          "before": 0,
+          "after": 75,
+          "unit": "% hours"
+        },
+        {
+          "asset": "Highway Truck Fleet",
+          "before": 80,
+          "after": 65,
+          "unit": "% fleet"
+        }
+      ]
+    }
+  }
+}
