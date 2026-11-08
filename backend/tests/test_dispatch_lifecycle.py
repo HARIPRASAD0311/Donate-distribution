@@ -214,3 +214,4 @@ def test_proof_of_delivery_reconciliation_and_demand_fulfillment():
         db.delete(deliv)
         db.delete(order)
         db.commit()
+

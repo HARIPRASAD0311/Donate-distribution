@@ -10,6 +10,7 @@ from backend.app.api.v1.endpoints import (
     recovery,
     dispatch,
     audit,
+    scenario,
 )
 
 api_router = APIRouter()
@@ -24,4 +25,5 @@ api_router.include_router(optimize.router, prefix="/optimize", tags=["Allocation
 api_router.include_router(recovery.router, prefix="/recovery", tags=["Recovery Simulator"])
 api_router.include_router(dispatch.router, prefix="/dispatch", tags=["Dispatch & POD"])
 api_router.include_router(audit.router, prefix="/audit", tags=["Audit & Reports"])
+api_router.include_router(scenario.router, prefix="/scenario", tags=["Scenario & Telemetry"])
 
