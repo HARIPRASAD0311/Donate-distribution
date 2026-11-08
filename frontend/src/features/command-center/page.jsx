@@ -29,6 +29,8 @@ import { SectionHeader } from '../../components/ui/SectionHeader.jsx';
 import { StatusBadge } from '../../components/ui/StatusBadge.jsx';
 import { ConfirmationDialog } from '../../components/ui/ConfirmationDialog.jsx';
 import { Skeleton } from '../../components/ui/Skeleton.jsx';
+import { useQuery } from '@tanstack/react-query';
+import { fetchLiveCommandCenter } from '../../services/commandCenterService.js';
 
 import { getCommandCenterData } from './data/commandCenterData.js';
 import { lotBalances } from '../../domain/operationalLedger.js';
@@ -70,6 +72,15 @@ export default function CommandCenterPage() {
   const dismissedGeographicAlertIds = useAppStore(state => state.dismissedGeographicAlertIds);
   const disasterZones = useAppStore(state => state.disasterZones);
   const geographicLocations = useAppStore(state => state.geographicLocations);
+  const isDemoMode = useAppStore(state => state.isDemoMode);
+  const incidentId = selectedIncident?.id;
+
+  const { data: liveCommandCenter, refetch: refetchLive } = useQuery({
+    queryKey: ['command-center', incidentId],
+    queryFn: () => fetchLiveCommandCenter(incidentId),
+    enabled: !isDemoMode,
+    staleTime: 30000,
+  });
 
   // Stage 4.5 Geographic Hazard Telemetry
   const geoAlerts = useMemo(() => {
@@ -107,6 +118,9 @@ export default function CommandCenterPage() {
   };
 
   const kpiSections = useMemo(() => {
+    if (!isDemoMode && liveCommandCenter?.sections?.length > 0) {
+      return liveCommandCenter.sections;
+    }
     const scenario = getCommandCenterData(selectedIncident, selectedCrisisType, selectedRegion);
 
     // 1. Available Usable Inventory (from inventoryLots & lotBalances)
@@ -448,6 +462,13 @@ export default function CommandCenterPage() {
 
   // Synchronized telemetry dataset
   const data = useMemo(() => {
+    if (!isDemoMode && liveCommandCenter) {
+      return {
+        ...liveCommandCenter,
+        kpis: liveCommandCenter.kpis || liveCommandCenter.sections?.flatMap((s) => s.cards) || [],
+        priorityDemands: liveCommandCenter.priorityDemands || [],
+      };
+    }
     const scenario = getCommandCenterData(selectedIncident, selectedCrisisType, selectedRegion);
     const flatKpis = kpiSections.flatMap((s) => s.cards);
 
@@ -498,9 +519,16 @@ export default function CommandCenterPage() {
     }
   };
 
-  // Consistent data refresh simulation (does not invent fake random incidents)
-  const handleRefresh = () => {
+  // Live or simulation refresh
+  const handleRefresh = async () => {
     setIsRefreshing(true);
+    if (!isDemoMode && typeof refetchLive === 'function') {
+      try {
+        await refetchLive();
+      } catch (e) {
+        console.error('Failed to refresh live command center', e);
+      }
+    }
     setTimeout(() => {
       setIsRefreshing(false);
     }, 600);

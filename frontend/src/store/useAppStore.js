@@ -153,6 +153,20 @@ export const useAppStore = create((set, get) => ({
 
   setReportingPeriod: (period) => set({ reportingPeriod: period }),
   setDataMode: (mode) => set({ dataMode: mode, isDemoMode: mode === 'demo' }),
+  syncLiveOperationalState: (liveData) => set((state) => ({
+    ...state,
+    ...(liveData.incidents ? { incidents: liveData.incidents } : {}),
+    ...(liveData.selectedIncident ? { selectedIncident: liveData.selectedIncident } : {}),
+    ...(liveData.facilities ? { facilities: liveData.facilities } : {}),
+    ...(liveData.inventoryLots ? { inventoryLots: liveData.inventoryLots } : {}),
+    ...(liveData.demandRecords ? { demandRecords: liveData.demandRecords } : {}),
+    ...(liveData.beneficiaryGroups ? { beneficiaryGroups: liveData.beneficiaryGroups } : {}),
+    ...(liveData.dispatchOrders ? { dispatchOrders: liveData.dispatchOrders } : {}),
+    ...(liveData.auditEvents ? { auditEvents: liveData.auditEvents } : {}),
+    ...(liveData.geographicLocations ? { geographicLocations: liveData.geographicLocations } : {}),
+    ...(liveData.disasterZones ? { disasterZones: liveData.disasterZones } : {}),
+    ...(liveData.lastDataFreshness ? { lastDataFreshness: liveData.lastDataFreshness } : {}),
+  })),
   
   // Navigation & Drawer toggles
   toggleSidebar: () => set((state) => ({ sidebarCollapsed: !state.sidebarCollapsed })),

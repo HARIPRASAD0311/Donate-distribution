@@ -7,9 +7,11 @@ import { SettingsModal } from './SettingsModal.jsx';
 import { InspectorDrawer } from '../components/drawers/InspectorDrawer.jsx';
 import { ErrorBoundary } from '../components/ui/ErrorBoundary.jsx';
 import { useAppStore } from '../store/useAppStore.js';
+import { useLiveOperationalSync } from '../hooks/useLiveOperationalSync.js';
 
 export function RootLayout() {
   const { sidebarCollapsed, mobileMenuOpen, setMobileMenuOpen } = useAppStore();
+  useLiveOperationalSync();
 
   return (
     <div className="min-h-screen bg-brand-bg text-text-primary flex flex-col antialiased">
