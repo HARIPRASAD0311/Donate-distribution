@@ -620,3 +620,4 @@ def import_all(reset_db: bool = False):
 if __name__ == "__main__":
     reset = "--reset" in sys.argv
     import_all(reset_db=reset)
+

@@ -22,3 +22,4 @@ class AuditEvent(Base):
     evidence_ref: Mapped[str] = mapped_column(String, nullable=True)
     related_events_json: Mapped[List[str]] = mapped_column(JSON, default=list)
     is_simulated: Mapped[bool] = mapped_column(Boolean, default=True)
+

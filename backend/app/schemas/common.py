@@ -11,3 +11,4 @@ class BaseSchema(BaseModel):
         populate_by_name=True,
         from_attributes=True,
     )
+

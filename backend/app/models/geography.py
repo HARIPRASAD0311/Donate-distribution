@@ -62,3 +62,4 @@ class DisasterZone(Base, AuditMixin):
     description: Mapped[str] = mapped_column(String, nullable=True)
     notes: Mapped[str] = mapped_column(String, nullable=True)
     geometry_json: Mapped[Dict[str, Any]] = mapped_column(JSON) # GeoJSON Polygon/MultiPolygon
+

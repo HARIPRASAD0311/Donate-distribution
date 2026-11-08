@@ -48,3 +48,4 @@ class AllocationLine(Base, AuditMixin):
     __table_args__ = (
         CheckConstraint("status IN ('RESERVED', 'PARTIALLY_DISPATCHED', 'CONSUMED', 'RELEASED')", name="chk_line_status"),
     )
+

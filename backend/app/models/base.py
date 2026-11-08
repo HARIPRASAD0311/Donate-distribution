@@ -9,3 +9,4 @@ class AuditMixin:
     verification_status: Mapped[str] = mapped_column(String, default="VERIFIED")
     submitted_by: Mapped[str] = mapped_column(String, default="SYSTEM_IMPORTER")
     is_simulated: Mapped[bool] = mapped_column(Boolean, default=True)
+

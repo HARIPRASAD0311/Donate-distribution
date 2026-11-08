@@ -23,3 +23,4 @@ class Facility(Base, AuditMixin):
     __table_args__ = (
         CheckConstraint("status IN ('OPERATIONAL', 'CONSTRAINED', 'INACTIVE')", name="chk_facility_status"),
     )
+

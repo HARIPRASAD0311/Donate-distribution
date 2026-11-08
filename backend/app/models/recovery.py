@@ -46,3 +46,4 @@ class RecoveryStrategy(Base, AuditMixin):
         CheckConstraint("status IN ('CANDIDATE', 'APPROVED', 'REJECTED')", name="chk_strategy_status"),
         CheckConstraint("computed_by IN ('seed', 'engine')", name="chk_strategy_computed_by"),
     )
+
