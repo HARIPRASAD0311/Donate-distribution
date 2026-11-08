@@ -136,3 +136,4 @@ class PlanApprovalRequest(CamelModel):
 class PlanRejectRequest(CamelModel):
     rejected_by: str = Field(alias="rejectedBy")
     reason: str
+

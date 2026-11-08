@@ -79,3 +79,4 @@ def list_plan_history(
     Retrieves historical versions, seeded benchmark runs, and approval records for plans.
     """
     return get_plan_history(db, incident_id)
+

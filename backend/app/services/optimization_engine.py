@@ -391,3 +391,4 @@ def solve_allocation_milp(db: Session, config: OptimizationJobConfig) -> Optimiz
         plan=plan_detail,
         constraintDiagnostics=diagnostics
     )
+

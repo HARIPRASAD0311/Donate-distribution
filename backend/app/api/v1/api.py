@@ -7,6 +7,7 @@ from backend.app.api.v1.endpoints import (
     inventory,
     demand,
     optimize,
+    recovery,
     dispatch,
     audit,
 )
@@ -20,6 +21,7 @@ api_router.include_router(geography.router, prefix="/geography", tags=["Geograph
 api_router.include_router(inventory.router, prefix="/inventory", tags=["Inventory & Resources"])
 api_router.include_router(demand.router, prefix="/demand", tags=["Demand & Beneficiaries"])
 api_router.include_router(optimize.router, prefix="/optimize", tags=["Allocation & Optimization"])
+api_router.include_router(recovery.router, prefix="/recovery", tags=["Recovery Simulator"])
 api_router.include_router(dispatch.router, prefix="/dispatch", tags=["Dispatch & POD"])
 api_router.include_router(audit.router, prefix="/audit", tags=["Audit & Reports"])
 
