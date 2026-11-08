@@ -144,3 +144,4 @@ def test_approve_strategy_success_and_audit():
         assert event is not None
         assert event.user == "Col. John Mercer (Taskforce Commander)"
         assert event.module == "Recovery Simulator"
+

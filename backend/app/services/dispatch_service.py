@@ -203,3 +203,124 @@ def verify_proof_of_delivery(session: Session, req: VerifyPodRequest) -> Dispatc
     session.refresh(order)
     return order
 
+def depart_dispatch_order(
+    session: Session,
+    dispatch_id: str,
+    actor: str = "Convoy Commander",
+    notes: Optional[str] = None
+) -> DispatchOrder:
+    order = session.scalar(select(DispatchOrder).where(DispatchOrder.id == dispatch_id))
+    if not order:
+        raise HTTPException(status_code=404, detail=f"Dispatch order '{dispatch_id}' not found.")
+    
+    if order.status == "IN_TRANSIT":
+        return order
+
+    prev_status = order.status
+    now_iso = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    order.status = "IN_TRANSIT"
+    order.dispatched_at = now_iso
+    order.progress_pct = max(order.progress_pct, 25.0)
+
+    log_audit_event(
+        session=session,
+        user=actor,
+        role="Convoy Commander",
+        action="DISPATCH_DEPARTED",
+        module="Dispatch & Verification",
+        entity_id=order.id,
+        status="IN_TRANSIT",
+        previous_value=prev_status,
+        new_value="IN_TRANSIT",
+        reason=notes or "Convoy departed staging facility",
+        is_simulated=True,
+    )
+
+    session.commit()
+    session.refresh(order)
+    return order
+
+def record_dispatch_arrival(
+    session: Session,
+    dispatch_id: str,
+    actor: str = "Destination Receptionist",
+    notes: Optional[str] = None
+) -> DispatchOrder:
+    order = session.scalar(select(DispatchOrder).where(DispatchOrder.id == dispatch_id))
+    if not order:
+        raise HTTPException(status_code=404, detail=f"Dispatch order '{dispatch_id}' not found.")
+
+    if order.status in ("ARRIVED_AWAITING_POD", "DELIVERED", "VERIFIED"):
+        return order
+
+    prev_status = order.status
+    now_iso = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    order.status = "ARRIVED_AWAITING_POD"
+    order.actual_arrival = now_iso
+    order.progress_pct = 90.0
+
+    log_audit_event(
+        session=session,
+        user=actor,
+        role="Destination Receptionist",
+        action="DISPATCH_ARRIVED",
+        module="Dispatch & Verification",
+        entity_id=order.id,
+        status="ARRIVED_AWAITING_POD",
+        previous_value=prev_status,
+        new_value="ARRIVED_AWAITING_POD",
+        reason=notes or "Shipment physically reached destination gate; awaiting POD verification",
+        is_simulated=True,
+    )
+
+    session.commit()
+    session.refresh(order)
+    return order
+
+def reroute_dispatch_order(
+    session: Session,
+    dispatch_id: str,
+    new_route_name: str,
+    justification: str,
+    actor: str = "Dispatch Operator"
+) -> DispatchOrder:
+    order = session.scalar(select(DispatchOrder).where(DispatchOrder.id == dispatch_id))
+    if not order:
+        raise HTTPException(status_code=404, detail=f"Dispatch order '{dispatch_id}' not found.")
+
+    # HARD RULE: Blocked routes cannot be used
+    route = session.scalar(
+        select(TransportRoute).where(
+            or_(TransportRoute.name == new_route_name, TransportRoute.id == new_route_name)
+        )
+    )
+    if route and (route.is_blocked or route.status == "BLOCKED"):
+        raise HTTPException(
+            status_code=400,
+            detail=f"Proposed alternative route '{new_route_name}' is currently BLOCKED ({route.blockage_reason or 'Impassable'}). Cannot reroute."
+        )
+
+    prev_route = order.route_name
+    order.route_name = new_route_name
+    order.route_status = "PASSABLE_WATERWAY" if "river" in new_route_name.lower() or "barge" in new_route_name.lower() else "PASSABLE"
+    order.exception_reason = None
+
+    log_audit_event(
+        session=session,
+        user=actor,
+        role="Dispatch Operator",
+        action="DISPATCH_REROUTED",
+        module="Dispatch & Verification",
+        entity_id=order.id,
+        status=order.status,
+        previous_value=prev_route,
+        new_value=new_route_name,
+        reason=justification,
+        is_simulated=True,
+    )
+
+    session.commit()
+    session.refresh(order)
+    return order
+
+

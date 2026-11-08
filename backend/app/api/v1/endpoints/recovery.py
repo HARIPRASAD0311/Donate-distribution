@@ -51,3 +51,4 @@ def approve_strategy(
     Rejects sign-off if baseline operational state transitioned since simulation was computed.
     """
     return approve_recovery_strategy(db, strategy_id, request)
+

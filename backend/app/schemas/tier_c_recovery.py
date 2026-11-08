@@ -138,3 +138,4 @@ class StrategyApprovalRequestSchema(CamelModel):
     approved_by: str = Field(alias="approvedBy")
     baseline_snapshot_id: Optional[str] = Field(default=None, alias="baselineSnapshotId")
     notes: Optional[str] = None
+

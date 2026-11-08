@@ -245,6 +245,20 @@ class VerifyPodRequest(BaseSchema):
     evidence_ref: str
     notes: Optional[str] = None
 
+class DepartDispatchRequest(BaseSchema):
+    actor: str = "Convoy Commander"
+    notes: Optional[str] = None
+
+class RecordArrivalRequest(BaseSchema):
+    actor: str = "Destination Receptionist"
+    notes: Optional[str] = None
+
+class RerouteDispatchRequest(BaseSchema):
+    new_route_name: str
+    justification: str
+    actor: str = "Dispatch Operator"
+
+
 # --- Audit Events ---
 class AuditEventSchema(BaseSchema):
     id: str
