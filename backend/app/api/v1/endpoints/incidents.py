@@ -6,6 +6,8 @@ from sqlalchemy.orm import Session
 from backend.app.core.database import get_db
 from backend.app.models.incident import Incident
 from backend.app.schemas.tier_a import IncidentSchema
+from backend.app.schemas.tier_b import CommandCenterPayloadSchema
+from backend.app.services.analytics_service import get_command_center_payload
 
 router = APIRouter()
 
@@ -21,3 +23,13 @@ def get_incident(incident_id: str, db: Session = Depends(get_db)):
     if not incident:
         raise HTTPException(status_code=404, detail=f"Incident '{incident_id}' not found.")
     return incident
+
+@router.get("/{incident_id}/command-center", response_model=CommandCenterPayloadSchema)
+def get_incident_command_center(incident_id: str, db: Session = Depends(get_db)):
+    """Retrieve full dynamic Tier B Command Center operational telemetry."""
+    incident = db.scalar(select(Incident).where(Incident.id == incident_id))
+    if not incident:
+        raise HTTPException(status_code=404, detail=f"Incident '{incident_id}' not found.")
+    return get_command_center_payload(db, incident_id)
+
+

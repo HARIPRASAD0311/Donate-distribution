@@ -46,3 +46,4 @@ def verify_demand(
 ):
     """Certify and verify a humanitarian demand with evidence reference."""
     return verify_demand_record(session=db, req=req)
+

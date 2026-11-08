@@ -41,3 +41,4 @@ def list_disaster_zones(
     if severity and severity != "ALL":
         stmt = stmt.where(DisasterZone.severity == severity)
     return list(db.scalars(stmt).all())
+

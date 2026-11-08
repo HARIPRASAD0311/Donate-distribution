@@ -21,3 +21,4 @@ def get_facility(facility_id: str, db: Session = Depends(get_db)):
     if not fac:
         raise HTTPException(status_code=404, detail=f"Facility '{facility_id}' not found.")
     return fac
+

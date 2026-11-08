@@ -262,3 +262,4 @@ class AuditEventSchema(BaseSchema):
     evidence_ref: Optional[str] = None
     related_events_json: List[str] = Field(default_factory=list)
     is_simulated: bool = True
+

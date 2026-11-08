@@ -40,3 +40,4 @@ def verify_pod(
 ):
     """Verify physical delivery and reconcile accepted/damaged/rejected quantities."""
     return verify_proof_of_delivery(session=db, req=req)
+

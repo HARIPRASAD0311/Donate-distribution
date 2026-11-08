@@ -43,3 +43,4 @@ def log_audit_event(
     )
     session.add(event)
     return event
+

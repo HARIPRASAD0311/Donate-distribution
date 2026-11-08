@@ -46,3 +46,4 @@ def quarantine_lot(
 ):
     """Move inventory lot into quarantine hold and emit an audit event."""
     return quarantine_inventory_lot(session=db, req=req)
+

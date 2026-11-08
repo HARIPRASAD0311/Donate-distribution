@@ -190,3 +190,4 @@ def quarantine_inventory_lot(session: Session, req: QuarantineLotRequest) -> Inv
     session.commit()
     session.refresh(lot)
     return lot
+

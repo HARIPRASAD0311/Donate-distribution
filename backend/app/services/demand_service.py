@@ -71,3 +71,4 @@ def verify_demand_record(session: Session, req: VerifyDemandRequest) -> DemandRe
     session.commit()
     session.refresh(demand)
     return demand
+

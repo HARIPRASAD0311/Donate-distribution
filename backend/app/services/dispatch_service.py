@@ -202,3 +202,4 @@ def verify_proof_of_delivery(session: Session, req: VerifyPodRequest) -> Dispatc
     session.commit()
     session.refresh(order)
     return order
+
