@@ -691,11 +691,25 @@ def get_command_center_payload(db: Session, incident_id: str) -> CommandCenterPa
         recentEvents=recent_events_panel
     )
 
-    # 11. Map Entities
-    # Compute center from facilities or default to primary depot
-    center_coords = [-19.825, 34.860]
-    if facilities:
-        center_coords = [facilities[0].latitude, facilities[0].longitude]
+    # 11. Map Entities (Assam Brahmaputra Valley Projection)
+    def to_assam_coords(lat: float, lon: float) -> list[float]:
+        """Maps any legacy negative fixture coordinates to Assam Brahmaputra coordinates."""
+        if lat > 0:
+            return [round(lat, 4), round(lon, 4)]
+        # Anchor: CSD Alpha (-19.832, 34.856) maps to Guwahati State Logistics Base (26.1445, 91.7362)
+        delta_lat = lat - (-19.832)
+        delta_lon = lon - 34.856
+        assam_lat = round(26.1445 + delta_lat * 2.5, 4)
+        assam_lon = round(91.7362 + delta_lon * 2.5, 4)
+        return [assam_lat, assam_lon]
+
+    # Incident center in Assam (or default to Guwahati / Brahmaputra basin center)
+    center_coords = [26.1445, 91.7362]
+    if incident and incident.center_json and isinstance(incident.center_json, list) and len(incident.center_json) == 2:
+        if incident.center_json[0] > 0:
+            center_coords = incident.center_json
+        else:
+            center_coords = to_assam_coords(incident.center_json[0], incident.center_json[1])
 
     facility_map_entities = [
         FacilityMapEntity(
@@ -704,7 +718,7 @@ def get_command_center_payload(db: Session, incident_id: str) -> CommandCenterPa
             name=f.name,
             type="WAREHOUSE" if "depot" in f.name.lower() or "base" in f.name.lower() else "DISTRIBUTION_CENTRE",
             locationName=f.location_name or f.name,
-            coordinates=[f.latitude, f.longitude],
+            coordinates=to_assam_coords(f.latitude, f.longitude),
             totalCapacityM3=f.total_capacity_m3,
             utilizedCapacityM3=f.utilized_capacity_m3,
             utilizationPct=round(f.utilized_capacity_m3 / f.total_capacity_m3 * 100.0, 1) if f.total_capacity_m3 else 0.0,
@@ -730,7 +744,7 @@ def get_command_center_payload(db: Session, incident_id: str) -> CommandCenterPa
                 id=g.id,
                 name=g.name,
                 sector=g.region,
-                coordinates=[g.latitude, g.longitude],
+                coordinates=to_assam_coords(g.latitude, g.longitude),
                 population=g.population,
                 priority=priority_str,
                 accessibility=g.access_condition,
@@ -745,22 +759,24 @@ def get_command_center_payload(db: Session, incident_id: str) -> CommandCenterPa
             )
         )
 
-    disruption_map_entities = [
-        DisruptionMapEntity(
-            id=r.id,
-            code=f"DISR-{r.id}",
-            title=r.name,
-            coordinates=r.waypoints_json[len(r.waypoints_json) // 2] if r.waypoints_json else [-19.840, 34.895],
-            severity="CRITICAL" if r.is_blocked else "WARNING",
-            corridor=r.name,
-            impact=r.blockage_reason or "Severely flooded infrastructure; transit delayed.",
-            delay=f"+{r.travel_time_hours or 4.5:.1f} Hours Detour",
-            suggestedBypass="Highland Bypass Route rt-3" if "rt-1" in r.name.lower() else "Western Ridge Bypass",
-            status="UNRESOLVED" if r.is_blocked else "SCOUT_DEPLOYED",
-            isSimulated=True
+    disruption_map_entities = []
+    for r in active_disrupted_routes:
+        mid_pt = r.waypoints_json[len(r.waypoints_json) // 2] if r.waypoints_json else [-19.840, 34.895]
+        disruption_map_entities.append(
+            DisruptionMapEntity(
+                id=r.id,
+                code=f"DISR-{r.id}",
+                title=r.name,
+                coordinates=to_assam_coords(mid_pt[0], mid_pt[1]),
+                severity="CRITICAL" if r.is_blocked else "WARNING",
+                corridor=r.name,
+                impact=r.blockage_reason or "Severely flooded infrastructure; transit delayed.",
+                delay=f"+{r.travel_time_hours or 4.5:.1f} Hours Detour",
+                suggestedBypass="Highland Bypass Route rt-3" if "rt-1" in r.name.lower() else "Western Ridge Bypass",
+                status="UNRESOLVED" if r.is_blocked else "SCOUT_DEPLOYED",
+                isSimulated=True
+            )
         )
-        for r in active_disrupted_routes
-    ]
 
     route_map_entities = [
         RouteMapEntity(
@@ -769,14 +785,14 @@ def get_command_center_payload(db: Session, incident_id: str) -> CommandCenterPa
             status=r.status,
             color="#C94C4C" if r.status == "BLOCKED" else ("#176B76" if r.transit_mode == "BARGE" else "#27856F"),
             dashArray="4 4" if r.status == "BLOCKED" else ("6 4" if r.status == "DELAYED" else "none"),
-            points=r.waypoints_json or []
+            points=[to_assam_coords(pt[0], pt[1]) for pt in (r.waypoints_json or [])]
         )
         for r in routes
     ]
 
     map_entities = MapEntitiesPayload(
         center=center_coords,
-        zoom=11,
+        zoom=9,
         scopeLabel=scope_label,
         isSupported=is_supported,
         facilities=facility_map_entities,

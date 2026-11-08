@@ -10,8 +10,8 @@
 // ==========================================
 const FLOOD_SCENARIO = {
   isSupported: true,
-  regionName: 'Beira & Zambezia Corridors',
-  scopeLabel: 'BEIRA & ZAMBEZIA CORRIDOR (FLOOD)',
+  regionName: 'Assam Brahmaputra Valley',
+  scopeLabel: 'ASSAM BRAHMAPUTRA VALLEY (FLOOD RESPONSE)',
   kpis: [
     {
       id: 'kpi-affected-pop',
@@ -69,9 +69,9 @@ const FLOOD_SCENARIO = {
     },
   ],
   mapEntities: {
-    center: [-19.825, 34.860],
-    zoom: 11,
-    scopeLabel: 'BEIRA & ZAMBEZIA CORRIDOR (FLOOD)',
+    center: [26.1445, 91.7362],
+    zoom: 9,
+    scopeLabel: 'ASSAM BRAHMAPUTRA VALLEY (FLOOD RESPONSE)',
     isSupported: true,
     facilities: [
       {

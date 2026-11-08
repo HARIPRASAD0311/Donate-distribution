@@ -211,15 +211,15 @@ export function CrisisMap({
         </div>
       </div>
 
-      {/* Leaflet Map Surface */}
+      {/* Leaflet Map Surface (Centered on Assam Brahmaputra Basin) */}
       <MapContainer
-        center={center || [-19.825, 34.860]}
-        zoom={zoom || 11}
+        center={(center && Array.isArray(center) && center[0] > 0) ? center : [26.1445, 91.7362]}
+        zoom={zoom || 9}
         scrollWheelZoom={true}
         className="w-full h-full"
         style={{ zIndex: 1 }}
       >
-        <MapViewController center={center} zoom={zoom} />
+        <MapViewController center={(center && Array.isArray(center) && center[0] > 0) ? center : [26.1445, 91.7362]} zoom={zoom || 9} />
 
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

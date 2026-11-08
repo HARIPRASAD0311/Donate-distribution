@@ -90,22 +90,22 @@ export function DemandMap({
   const [showDensityZones, setShowDensityZones] = useState(true);
   const [showCriticalOnly, setShowCriticalOnly] = useState(false);
 
-  // Determine center based on active region
+  // Determine center based on active region in Assam Brahmaputra Valley
   const getMapCenterAndZoom = () => {
-    if (activeRegion === 'Buzi District') {
-      return { center: [-19.820, 34.780], zoom: 12 };
+    if (activeRegion === 'Barpeta' || activeRegion === 'Buzi District') {
+      return { center: [26.3211, 91.0061], zoom: 11 };
     }
-    if (activeRegion === 'Manga IDP Hub') {
-      return { center: [-19.825, 34.865], zoom: 12 };
+    if (activeRegion === 'Dhubri' || activeRegion === 'Manga IDP Hub') {
+      return { center: [26.0208, 89.9744], zoom: 11 };
     }
-    if (activeRegion === 'Chibabava Basin') {
-      return { center: [-19.725, 34.675], zoom: 11 };
+    if (activeRegion === 'Morigaon' || activeRegion === 'Chibabava Basin') {
+      return { center: [26.2554, 92.3421], zoom: 11 };
     }
-    if (activeRegion === 'Nhamatanda Corridor') {
-      return { center: [-19.665, 34.535], zoom: 11 };
+    if (activeRegion === 'Silchar' || activeRegion === 'Nhamatanda Corridor') {
+      return { center: [24.8333, 92.7789], zoom: 11 };
     }
-    // Default Beira & Zambezia Basin overview
-    return { center: [-19.785, 34.780], zoom: 10 };
+    // Default Assam Brahmaputra Valley overview
+    return { center: [26.1445, 91.7362], zoom: 9 };
   };
 
   const { center, zoom } = getMapCenterAndZoom();

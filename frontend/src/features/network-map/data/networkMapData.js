@@ -10,10 +10,10 @@
 // ==========================================
 const FLOOD_NETWORK = {
   isSupported: true,
-  regionName: 'Beira & Zambezia Corridors',
-  scopeLabel: 'BEIRA & ZAMBEZIA CORRIDOR (FLOOD)',
-  center: [-19.825, 34.860],
-  defaultZoom: 11,
+  regionName: 'Assam Brahmaputra Valley',
+  scopeLabel: 'ASSAM BRAHMAPUTRA VALLEY (FLOOD RESPONSE)',
+  center: [26.1445, 91.7362],
+  defaultZoom: 9,
   entities: [
     // Institutional Donors
     {

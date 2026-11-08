@@ -276,8 +276,8 @@ export function NetworkMapCanvas({
       )}
 
       <MapContainer
-        center={center || [-19.825, 34.860]}
-        zoom={zoom || 11}
+        center={(center && Array.isArray(center) && center[0] > 0) ? center : [26.1445, 91.7362]}
+        zoom={zoom || 9}
         scrollWheelZoom={true}
         className="w-full h-full"
         style={{ zIndex: 1 }}
@@ -287,7 +287,7 @@ export function NetworkMapCanvas({
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      <MapViewResetter center={center} zoom={zoom} resetTrigger={resetTrigger} />
+      <MapViewResetter center={(center && Array.isArray(center) && center[0] > 0) ? center : [26.1445, 91.7362]} zoom={zoom || 9} resetTrigger={resetTrigger} />
       <MapEntityFocuser focusedCoordinates={focusedCoordinates} />
 
       {/* 1. Stage 4.4 Disaster Zones & Geographical Risk Layers (GeoJSON Polygons) */}
