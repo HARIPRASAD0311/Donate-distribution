@@ -17,3 +17,4 @@ def get_command_center(
     Accepts optional incidentId query parameter.
     """
     return get_command_center_payload(db, incident_id)
+

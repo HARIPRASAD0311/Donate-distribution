@@ -189,3 +189,4 @@ class CommandCenterPayloadSchema(CamelModel):
     charts: ChartsPayload
     operational_panels: OperationalPanelsPayload = Field(alias="operationalPanels")
     priority_demands: List[PriorityDemandItem] = Field(alias="priorityDemands")
+
