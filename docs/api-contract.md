@@ -87,3 +87,4 @@ This document specifies the REST API contract between the **FastAPI Backend** an
 * `GET /api/v1/audit/export`
   * Query parameters: `format=csv` or `format=tsv`.
   * Streams RFC-4180 compliant export.
+

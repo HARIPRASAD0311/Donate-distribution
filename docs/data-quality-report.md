@@ -136,3 +136,4 @@ To maintain data integrity without altering `data/source/`:
 2. **Scenario Clock**: Establish `SCENARIO_NOW = "2024-07-05T09:30:00Z"` in `config/scenario.yaml` as the reference anchor for all relative time conversions and expiry countdowns.
 3. **Multi-Key Resolution**: For facility and beneficiary foreign keys, implement a resolver service that checks against both `id` and `code`.
 4. **Geo Normalization**: Store standardized `latitude` and `longitude` float columns, preserving the raw GeoJSON/JSON payloads in dedicated JSON columns for map visualization.
+

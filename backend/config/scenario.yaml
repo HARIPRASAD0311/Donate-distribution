@@ -1,0 +1,20 @@
+scenario:
+  id: "INC-2026-0412"
+  code: "CYC-IDAI-2"
+  name: "Brahmaputra Monsoon Floods 2024 — Coastal & Valley Response"
+  region: "Assam Brahmaputra Flood Response"
+  crisis_type: "Flood"
+  scenario_now: "2024-07-05T09:30:00Z"
+  is_simulated: true
+  watermark: "DEMONSTRATION SCENARIO — SYNTHETIC DATA"
+
+illustrative_assumptions:
+  default_speed_kmh:
+    RIVER_BARGE: 12.0
+    ALL_TERRAIN_TRUCK: 35.0
+    CARGO_HELICOPTER: 140.0
+  road_status_factors:
+    PASSABLE: 1.0
+    PASSABLE_WATERWAY: 0.8
+    DELAYED: 0.5
+    BLOCKED: 0.0

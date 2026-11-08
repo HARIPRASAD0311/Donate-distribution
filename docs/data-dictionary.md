@@ -316,3 +316,4 @@ Immutable, append-only ledger of actions and administrative approvals.
   * Multi-attribute strategy comparison matrix (Recovery Time, Cost, Feasibility, Coverage).
   * Monte Carlo probability distribution of transit delays (100 synthetic runs).
   * Conditional Value at Risk (CVaR) evaluating tail-risk shortages.
+

@@ -25,6 +25,8 @@ wheels/
 
 # Database (Recreated by make reset-db && make import-data)
 *.db
+*.db-shm
+*.db-wal
 *.sqlite
 *.sqlite3
 
@@ -38,3 +40,4 @@ frontend/
 .env
 .DS_Store
 Thumbs.db
+
